@@ -1,3 +1,5 @@
+#-*- coding: utf-8 -*-
+
 from django.db import models
 from django import forms
 
@@ -33,8 +35,9 @@ class Book(models.Model):
 
 
 class ContactForm(forms.Form):
-    subject = forms.CharField(max_length=100)
-    message = forms.CharField()
-    sender = forms.EmailField()
+    sender = forms.EmailField(required=False, label="E-posta:")
+    subject = forms.CharField(max_length=100, label="Konu:")
+    message = forms.CharField(widget=forms.Textarea, label="İleti:")
+    
 
 	
