@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ücretsiz e-kitapların bulunduğu internet sitesi">
+    <meta name="author" content="D. Barış Akkurt">
+
+    <title>Açık Kütüphane</title>
+
+    <!-- Bootstrap core CSS -->
+    <!--<link href="../../dist/css/bootstrap.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/jumbotron-narrow.css' %}" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li><a href="/booksite/">Ana Sayfa</a></li>
+          <li><a href="/booksite/all_books/">Tüm Kitaplar</a></li>
+          <li class="active"><a href="/booksite/about/">Hakkında</a></li>
+        </ul>
+        <h3 class="text-muted">Açık Kütüphane (Beta)</h3>
+      </div>
+      <div class="main">
+		  <h4>Site Hakkında</h4>
+		  
+		  <h4>Siteyi Yapanlar</h4>
+		  <p>Açık Kütüphane, D. Barış Akkurt'un bireysel projesidir ve tüm projeyi kodlamıştır.</p>
+		  
+		  <h4>Teknik altyapı</h4>
+		  <p>Açık Kütüphane projesi önyüzde JavaScript ve Bootstrap framework'ü kullanmaktadır. Arka
+		  yüzde ise Python programlama dili ve Django framework'ü kullanılmaktadır. Veritabanı olarak
+		  ise Sqlite kullanılmaktadır.</p>
+		  
+		  <h4>Sıkça Sorulan Sorular</h4>
+		  <p>1-Sitedeki kitaplar nasıl ücretsiz oluyor?</p>
+		  <p>2-Çok az kitap var neden?</p>
+		  <p>3-Siteniz güzel ve size yardım etmek istiyorum. Nasıl yaparım?</p>
+		  <p>4-Sitenizde dağıttığınız bir kitabın yasal olmadığını düşünüyorum. Ne yapmalıyım?</p>
+		  <p>5-Kindle, tablet veya telefonlara uygun olarak kitapları dağıtsanız olmaz mı?</p>
+		  <p>6-Bu sitenin yapılmasındaki amaç nedir?</p>
+		  <p>7-Ben bir yazarım kitabımı sitenize ekler misiniz?</p>
+		  
+		  <h4>İletişim</h4>
+		  <p>İletişim için <a href="/booksite/send_message/">buradaki</a> iletişim formunu kullanabilirsiniz.</p>
+      </div>
+
+      <div class="footer">
+        <p>&copy; 2014 - D. Barış Akkurt tarafından geliştirilmektedir. Kitapların içerikleri yazarlarına aittir.</p>
+      </div>
+
+    </div>
+  </body>
+</html>

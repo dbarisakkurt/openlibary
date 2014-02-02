@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ücretsiz e-kitapların bulunduğu internet sitesi">
+    <meta name="author" content="D. Barış Akkurt">
+
+    <title>Açık Kütüphane</title>
+
+    <!-- Bootstrap core CSS -->
+    <!--<link href="../../dist/css/bootstrap.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/jumbotron-narrow.css' %}" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a href="/booksite/">Ana Sayfa</a></li>
+          <li><a href="/booksite/all_books/">Tüm Kitaplar</a></li>
+          <li><a href="/booksite/about/">Hakkında</a></li>
+        </ul>
+        <h3 class="text-muted">Açık Kütüphane (Beta)</h3>
+      </div>
+
+      <div class="jumbotron">
+        <h1>Açık Kütüphane</h1>
+        <p class="lead">Açık Kütüphane projesi internette yer alan Türkçe e-kitapları size sunar. Açık Kütüphane'de yer alan kitapları indirip okumak ücretsiz ve yasaldır.</p>
+        <p><a class="btn btn-lg btn-success" href="/booksite/all_books/" role="button">Kitaplara bak</a></p>
+      </div>
+
+      <div class="row marketing">
+        <div class="col-lg-6">
+          <h4>Ücretsizdir</h4>
+          <p>Açık Kütüphane'deki kitapları bilgisayarınıza indirmek ve okumak ücretsizdir ve bir para ödemeniz gerekmez.</p>
+
+          <h4>Yasaldır</h4>
+          <p>Açık Kütüphane'deki kitaplar internette ücretsiz dağıtılan kitaplardır ve okumanız için hukuki bir engel yoktur.</p>
+
+          <h4>Kullanımı kolaydır</h4>
+          <p>Açık Kütüphane kullanımı kolay bir internet sitedir.</p>
+        </div>
+
+        <div class="col-lg-6">
+          <h4>7/24 Açıktır</h4>
+          <p>Günün her saati Açık Kütüphane'ye gelip dilediğiniz kitaba erişebilirsiniz ve istediğiniz kitabı okuyabilirsiniz.</p>
+
+          <h4>Kar amacı gütmez</h4>
+          <p>Açık Kütüphane kar amacı gütmemektedir ve hiçbir zaman gütmeyecektir. Bu nedenle Açık Kütüphane'de reklam göremezsiniz.</p>
+
+          <h4>Üyelik gerekmez</h4>
+          <p>Açık Kütüphane'den yararlanabilmek için üye olmanıza gerek yoktur.</p>
+        </div>
+      </div>
+
+      <div class="footer">
+        <p>&copy; 2014 - D. Barış Akkurt tarafından geliştirilmektedir. Kitapların içerikleri yazarlarına aittir.</p>
+      </div>
+
+    </div>
+  </body>
+</html>
