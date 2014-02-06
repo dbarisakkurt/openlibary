@@ -38,7 +38,11 @@
 			  {% endfor %}
 			</ul>
 		  <p style="font-weight:bold;">Kategori:</p>
-		  <a href="#">İndir</a>
+      {% for genre in book.genres.all %}
+          <li>{{ genre.name }} </li>
+        {% endfor %}
+
+		  <a href="{{book.cover_path}}">İndir</a>
 
       </div>
 
