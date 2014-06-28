@@ -5,6 +5,14 @@ from django import forms
 import datetime
 
 
+#TODO: resim ve dosya upload
+#TODO: dosyalara link ver
+#TODO: sayfalama özelliği
+#TODO: yazar için özgeçmiş, web sitesi, doğum tariyi alanı ekle.
+#TODO: kitap için kısa özet, uzun özet, orjinal dil, orjinal adı, yayın tarihi, lisansı alanı ekle 
+
+
+
 class Genre(models.Model):
     name = models.CharField(max_length=40)
 
