@@ -5,11 +5,9 @@ from django import forms
 import datetime
 
 
-#TODO: resim ve dosya upload
-#TODO: dosyalara link ver
-#TODO: sayfalama özelliği
 #TODO: yazar için özgeçmiş, web sitesi, doğum tariyi alanı ekle.
 #TODO: kitap için kısa özet, uzun özet, orjinal dil, orjinal adı, yayın tarihi, lisansı alanı ekle 
+#TODO: dropbox integration
 
 
 
@@ -31,10 +29,22 @@ class Author(models.Model):
 class Book(models.Model):
 
     def change_name(instance, file_name):
-        return "documents/covers/"+unicode(datetime.datetime.now())+file_name
+        year=datetime.datetime.today().year
+        month=datetime.datetime.today().month
+        day=datetime.datetime.today().day
+        hour=datetime.datetime.today().hour
+        minute=datetime.datetime.today().minute
+        second=datetime.datetime.today().second
+        return "documents/covers/"+unicode(str(year)+str(month)+str(day)+str(hour)+str(minute)+str(second))+file_name
 
     def change_name2(instance, file_name):
-        return "documents/docs/"+unicode(datetime.datetime.now())+file_name
+        year=datetime.datetime.today().year
+        month=datetime.datetime.today().month
+        day=datetime.datetime.today().day
+        hour=datetime.datetime.today().hour
+        minute=datetime.datetime.today().minute
+        second=datetime.datetime.today().second
+        return "documents/docs/"+unicode(str(year)+str(month)+str(day)+str(hour)+str(minute)+str(second))+file_name
 
     title = models.CharField(max_length=100)
     authors = models.ManyToManyField(Author)

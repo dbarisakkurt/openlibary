@@ -42,7 +42,9 @@
           <li>{{ genre.name }} </li>
         {% endfor %}
 
-		  <a href="{{book.cover_path}}">İndir</a>
+		  <a href="/temp_files/{{book.book_file}}">İndir</a>
+		  
+		  <img src="/temp_files/{{book.cover_path}}" alt="Kitap Kapagi" width="100" height="140" />
 
       </div>
 

@@ -64,6 +64,22 @@
 		  <p>Herhangi bir kitap bulunmamaktadır.</p>
 		{% endif %}
       </div>
+      
+      <div class="pagination">
+    		<span class="step-links">
+        		{% if all_books_list.has_previous %}
+            		<a href="?page={{ all_books_list.previous_page_number }}">previous</a>
+        		{% endif %}
+
+        		<span class="current">
+            		Page {{ all_books_list.number }} of {{ all_books_list.paginator.num_pages }}.
+        		</span>
+
+        		{% if all_books_list.has_next %}
+            		<a href="?page={{ all_books_list.next_page_number }}">next</a>
+        		{% endif %}
+    		</span>
+</div>
 
       <div class="footer">
         <p>&copy; 2014 - D. Barış Akkurt tarafından geliştirilmektedir. Kitapların içerikleri yazarlarına aittir.</p>

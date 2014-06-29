@@ -7,6 +7,7 @@ from django.core.mail import send_mail
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 import logging
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 logger = logging.getLogger(__name__)
 
@@ -18,7 +19,23 @@ logger = logging.getLogger(__name__)
 
 def all_books(request):
     all_books_list = Book.objects.all().order_by('-title')[:]
+    paginator = Paginator(all_books_list, 10) # Show 10 books per page
+    
     all_genres_list = Genre.objects.all().order_by('-name')[:]
+    
+    page = request.GET.get('page')
+    try:
+        all_books_list = paginator.page(page)
+    except PageNotAnInteger:
+        all_books_list = paginator.page(1)        # If page is not an integer, deliver first page.
+    except EmptyPage:
+        # If page is out of range (e.g. 9999), deliver last page of results.
+        all_books_list = paginator.page(paginator.num_pages)
+
+    
+    
+    
+    
     
     context = {'all_books_list': all_books_list, 'all_genres_list': all_genres_list}
     return render(request, 'booksite/all_books.html', context)
