@@ -9,5 +9,6 @@ urlpatterns = patterns('',
     url(r'^all_books/$', views.all_books, name='all_books'),
     url(r'^books/(?P<book_id>\d+)/detail/$', views.book_detail, name='book_detail'),
     url(r'^send_message/$', views.send_message, name='send_message'),
-    url(r'^filter_genre/$', views.filter_genre, name='filter_genre')
+    url(r'^filter_genre/$', views.filter_genre, name='filter_genre'),
+    url(r'^authors/(?P<author_id>\d+)/detail/$', views.author_detail, name='author_detail')
 )

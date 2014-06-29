@@ -31,15 +31,25 @@
 
       <div class="main">
 
+		<div class="row">
 		<form method="get" action="/booksite/filter_genre">
+		<div class="col-md-4">
 			<!--{% csrf_token %}-->
-			<select name="genre">
+			<select name="genre" class="form-control">
 				{% for genre in all_genres_list %}
 					<option value="{{genre.id}}">{{genre.name}}</option>
 				{% endfor %}
-			</select>  
-			<input type="submit" value="Göster">
+			</select>
+			</div>
+		<div class="col-md-4">  
+		<input type="submit" value="Göster" class="form-control">
+		</div>
+		</div>
+		
 		</form>
+		
+		<br />
+		
 		  
 		  
 		  
@@ -52,7 +62,7 @@
 				  Yazarlar: 
 				  <ul>
 				  {% for author in book.authors.all %}
-				    <li>{{ author.first_name }} {{ author.last_name }}</li>
+				    <li><a href="{% url 'author_detail' author.id %}">{{ author.first_name }} {{ author.last_name }}</a></li>
 				  {% endfor %}
 				  </ul>
 			  </p>

@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from booksite.models import Book, Genre
+from booksite.models import Book, Genre, Author
 from django.shortcuts import render, get_object_or_404, render_to_response
 from django.template import RequestContext
 from models import ContactForm
@@ -44,6 +44,9 @@ def book_detail(request, book_id):
     book = get_object_or_404(Book, pk=book_id)
     return render(request, 'booksite/book_detail.html', {'book': book})
 
+def author_detail(request, author_id):
+    author = get_object_or_404(Author, pk=author_id)
+    return render(request, 'booksite/author_detail.html', {'author': author})
 
 
 def filter_genre(request):
