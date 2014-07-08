@@ -1,4 +1,4 @@
 *.pyc
 *.pyo
-booksite/temp_files/*
+booksite/temp_files/
 openlibrarydb
