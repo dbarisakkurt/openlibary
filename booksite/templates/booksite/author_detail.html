@@ -28,37 +28,13 @@
         </ul>
         <h3 class="text-muted">Açık Kütüphane (Beta)</h3>
       </div>
-
-      <div class="main">		  
-		{% if books_in_genre %}
-		<div class="panel panel-default">
-		<div class="panel-body">
-		<ul class="list-gruop">
-		  {% for book in books_in_genre %}
-			<li class="list-group-item">
-			  <h4><a href="{% url 'book_detail' book.id %}">{{ book.title }} <span class="label label-danger">Yeni</span></a></h4>
-			  <p> Tanıtım: </p>
-			  <p> {{ book.short_summary }} </p>
-			  <p>
-				  Yazarlar: 
-				  <ul>
-				  {% for author in book.authors.all %}
-				    <li>{{ author.first_name }} {{ author.last_name }}</li>
-				  {% endfor %}
-				  </ul>
-			  </p>
-			  <p> Lisans: </p>
-			  <p> {{ book.license }} </p>
-			  <img src="/temp_files/{{book.cover_path}}" alt="Kitap Kapagi" width="100" height="140" />
-			</li>
-		  {% endfor %}
-		</ul>
-		</div>
-		{% else %}
-		  <p>Herhangi bir kitap bulunmamaktadır.</p>
-		{% endif %}
+      <div class="main">
+		  <h4 style="font-weight:bold;">Yazar:</h4><h4> {{ author.first_name }} {{ author.last_name }}</h4>
+		  <p style="font-weight:bold;">İnternet sitesi:</p> <p> {{author.website}} </p>
+		  <p style="font-weight:bold;">E-posta:</p> <p> {{author.email}} </p>
+		  <p style="font-weight:bold;">Biyografi:</p> <p> {{author.biography}} </p>
       </div>
-	
+
       <div class="footer">
         <p>&copy; 2014 - D. Barış Akkurt tarafından geliştirilmektedir. Kitapların içerikleri yazarlarına aittir.</p>
       </div>

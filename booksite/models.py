@@ -7,22 +7,26 @@ import datetime
 
 #zorunlu:
 #TODO: dropbox integration
-#TODO: kitap listeleme sayfasını güzelleştir.
-#TODO: kitap ayrıntısı sayfasını güzelleştir.
-#TODO: yazar ayrıntısı sayfasını güzelleştir.
-#TODO: pagination türkçe yap.
-#TODO: hakkında sayfasını güzelleştir; sekme vs. olabilir.
-#TODO: kullanım koşulları: project gutenberg terms of use benzeri
-#TODO: django sitemap yap.
+#TODO: kitap listeleme sayfalarını güzelleştir: kitabın resmini sağa yasla
+#TODO: kitap ayrıntısı sayfası: kitabın resmini sağa yasla, dropbox butonunu güzelleştir
+
 
 #seçimli:
 #TODO: iletişim formunu güzelleştir, bootstrap stilleri
-#TODO: python ile kitapları pdf olarak dışarı aktarma.
-
+#TODO: python ile kitap listesini pdf olarak dışarı aktarma.
+#TODO: base template kullan.
+#TODO: django sitemap yap.
+#TODO: short story ve long story alanlarını genişlet admin sayfasında ve bu kısma daha çok veri girilebilsin veritabanı.
+#TODO: kitapları alfabetik olarak sırala tüm kitaplar sayfasında
+#TODO: eklenme tarihi, alfabetik vs. gibi sıralama türleri ekle.
+#TODO: toplam kitap sayısını tüm kitaplar sayfasına ekle.
+#TODO: filter sayfasına pager ekle.
+#TODO: is_new alanı ekle. is_new true ise yanına new badge'i ekle ileride.
 
 #kod refaktor:
 #dizin isimleri dinamik olacak, şu an hardcode
 #pep8.py denetimi ekle
+#bazı dosyalar .gitignore dosyasına eklenecek
 
 
 

@@ -1,61 +1,110 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 {% load static %}
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ücretsiz e-kitapların bulunduğu internet sitesi">
-    <meta name="author" content="D. Barış Akkurt">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description"
+	content="Ücretsiz e-kitapların bulunduğu internet sitesi">
+<meta name="author" content="D. Barış Akkurt">
 
-    <title>Açık Kütüphane</title>
 
-    <!-- Bootstrap core CSS -->
-    <!--<link href="../../dist/css/bootstrap.css" rel="stylesheet">-->
-    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
 
-    <!-- Custom styles for this template -->
-    <link href="{% static 'css/jumbotron-narrow.css' %}" rel="stylesheet">
-  </head>
+<title>Açık Kütüphane</title>
 
-  <body>
-    <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li><a href="/booksite/">Ana Sayfa</a></li>
-          <li><a href="/booksite/all_books/">Tüm Kitaplar</a></li>
-          <li class="active"><a href="/booksite/about/">Hakkında</a></li>
-        </ul>
-        <h3 class="text-muted">Açık Kütüphane (Beta)</h3>
-      </div>
-      <div class="main">
-		  <h4>Site Hakkında</h4>
-		  
-		  <h4>Siteyi Yapanlar</h4>
-		  <p>Açık Kütüphane, D. Barış Akkurt'un bireysel projesidir ve tüm projeyi kodlamıştır.</p>
-		  
-		  <h4>Teknik altyapı</h4>
-		  <p>Açık Kütüphane projesi önyüzde JavaScript ve Bootstrap framework'ü kullanmaktadır. Arka
-		  yüzde ise Python programlama dili ve Django framework'ü kullanılmaktadır. Veritabanı olarak
-		  ise Sqlite kullanılmaktadır.</p>
-		  
-		  <h4>Sıkça Sorulan Sorular</h4>
-		  <p>1-Sitedeki kitaplar nasıl ücretsiz oluyor?</p>
-		  <p>2-Çok az kitap var neden?</p>
-		  <p>3-Siteniz güzel ve size yardım etmek istiyorum. Nasıl yaparım?</p>
-		  <p>4-Sitenizde dağıttığınız bir kitabın yasal olmadığını düşünüyorum. Ne yapmalıyım?</p>
-		  <p>5-Kindle, tablet veya telefonlara uygun olarak kitapları dağıtsanız olmaz mı?</p>
-		  <p>6-Bu sitenin yapılmasındaki amaç nedir?</p>
-		  <p>7-Ben bir yazarım kitabımı sitenize ekler misiniz?</p>
-		  
-		  <h4>İletişim</h4>
-		  <p>İletişim için <a href="/booksite/send_message/">buradaki</a> iletişim formunu kullanabilirsiniz.</p>
-      </div>
+<!-- Bootstrap core CSS -->
+<!--<link href="../../dist/css/bootstrap.css" rel="stylesheet">-->
 
-      <div class="footer">
-        <p>&copy; 2014 - D. Barış Akkurt tarafından geliştirilmektedir. Kitapların içerikleri yazarlarına aittir.</p>
-      </div>
+<script
+	src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type='text/javascript' src="{% static 'js/bootstrap.js' %}"></script>
+<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+<link href="{% static 'css/jumbotron-narrow.css' %}" rel="stylesheet">
 
-    </div>
-  </body>
+
+</head>
+
+<body>
+	<div class="container">
+		<div class="header">
+			<ul class="nav nav-pills pull-right">
+				<li><a href="/booksite/">Ana Sayfa</a></li>
+				<li><a href="/booksite/all_books/">Tüm Kitaplar</a></li>
+				<li class="active"><a href="/booksite/about/">Hakkında</a></li>
+			</ul>
+			<h3 class="text-muted">Açık Kütüphane (Beta)</h3>
+		</div>
+		<div class="main">
+			<h4>İletişim</h4>
+			<p>
+				İletişim için <a href="/booksite/send_message/">buradaki</a>
+				iletişim formunu kullanabilirsiniz.
+			</p>
+			<!-- Navigation tabs -->
+			<ul class="nav nav-tabs" role="tablist">
+				<li class="active"><a href="#about" role="tab" data-toggle="tab">Hakkında</a></li>
+				<li><a href="#developers" role="tab" data-toggle="tab">Geliştiriciler</a></li>
+				<li><a href="#tech_infrastructure" role="tab" data-toggle="tab">Teknik
+						Altyapı</a></li>
+				<li><a href="#faq" role="tab" data-toggle="tab">SSS</a></li>
+			</ul>
+			<!-- Tab panes -->
+			<div class="tab-content">
+				<div class="tab-pane active" id="about">
+				<p>Açık Kütüphane projesi ücretsiz ve yasal kitapları barındıran 
+				sayısal bir kitaplık projesidir. Açık Kütüphane'deki kitapları
+				ücretsiz olarak bilgisayarınıza indirip okuyabilirsiniz. Bazı kitaplar
+				kişisel kullanımdan daha fazla özgürlüğü kullanıcılarına sunabilir
+				ancak çeşitli kısıtlamalar da olabilir. Daha ayrıntılı bilgi için
+				kitapların varsa lisans bilgilerine bakabilirsiniz.</p>
+				</div>
+				<div class="tab-pane" id="developers">
+					<p>Açık Kütüphane, D. Barış Akkurt'un bireysel projesidir ve
+						tüm projeyi kodlamıştır.</p>
+				</div>
+				<div class="tab-pane" id="tech_infrastructure">
+					<p>Açık Kütüphane projesi önyüzde JavaScript ve Bootstrap
+						framework'ü kullanmaktadır. Arka yüzde ise Python programlama dili
+						ve Django framework'ü kullanılmaktadır. Veritabanı olarak ise
+						Sqlite kullanılmaktadır.</p>
+				</div>
+				<div class="tab-pane" id="faq">
+					<p>1-Sitedeki kitaplar nasıl ücretsiz oluyor?</p>
+					<p>Sitedeki kitaplar yazarları tarafında ücretsiz olarak dağıtılmakta olup
+					biz de bunları Açık Kütüphane'ye ekledik.</p>
+					<p>2-Çok az kitap var neden?</p>
+					<p>Açık ve özgür kitaplar Dünya'da oldukça yaygın olsa da Türkiye'de bireysel
+					çabaların dışında pek bir gelişim göstermemiştir. Bunu matbaanın Türkiye'ye
+					geç gelmesiyle de bağdaştırabiliriz. Ne yazık ki sayısal veya geleneksel
+					pek kitap okumuyoruz, dolayısıla arz da düşük oluyor.</p>
+					<p>3-Siteniz güzel ve size yardım etmek istiyorum. Nasıl
+						yaparım?</p>
+					<p>İletişim formunu kullanarak bizimle iletişime geçerseniz daha ayrıntılı konuşabiliriz.
+					Bunun dışında Açık Kütüphane'yi internette tanıtarak bize yardım etmeye başlayabilirsiniz.</p>
+					<p>4-Sitenizde dağıttığınız bir kitabın yasal olmadığını
+						düşünüyorum. Ne yapmalıyım?</p>
+					<p>Bu konuda çok katıyız, kitapları genelde kişilerle
+					iletişime geçerek sitemize ekliyoruz. Yine de yasal olmadığını düşündüğünüz bir kitap 
+					varsa bize derhal bildirin hemen kaldıralım.</p>
+					<p>5-Kindle, tablet veya telefonlara uygun olarak kitapları
+						dağıtsanız olmaz mı?</p>
+					<p>Açık Kütüphane başarılı olursa bu konuda ileride çalışmalar yapmayı düşünüyoruz.</p>
+					<p>6-Bu sitenin yapılmasındaki amaç nedir?</p>
+					<p>Türkiye gelişmekte olan bir ülke ve internette nitelikli ücretsiz ve özgür kitap
+					bulmak neredeyse olanaksız. Biz kişilerin kitaplara ve bilgiye daha kolay ulaşması
+					gerektiğine inanıyoruz. Bu nedenle bu siteyi yaptık. </p>
+					<p>7-Ben bir yazarım kitabımı sitenize ekler misiniz?</p>
+					<p>Büyük ihtimalle evet. İletişim formunu kullanabilirsiniz.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer">
+			<p>&copy; 2014 - D. Barış Akkurt tarafından geliştirilmektedir.
+				Kitapların içerikleri yazarlarına aittir.</p>
+		</div>
+
+	</div>
+</body>
 </html>

@@ -1,0 +1,426 @@
+[05/Jul/2014 17:37:15] DEBUG [booksite.views:37] hello book detail
+[05/Jul/2014 17:37:25] DEBUG [booksite.views:71] hello1
+[05/Jul/2014 17:37:25] DEBUG [booksite.views:78] Config file not found.
+[05/Jul/2014 17:38:37] DEBUG [booksite.views:71] hello1
+[05/Jul/2014 17:38:37] DEBUG [booksite.views:75] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 17:38:37] DEBUG [booksite.views:76] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 17:38:37] DEBUG [booksite.views:80] Config file not found.
+[05/Jul/2014 17:51:00] DEBUG [booksite.views:37] hello book detail
+[05/Jul/2014 17:51:03] DEBUG [booksite.views:78] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 17:51:03] DEBUG [booksite.views:79] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 17:52:27] DEBUG [booksite.views:37] hello book detail
+[05/Jul/2014 17:52:28] DEBUG [booksite.views:78] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 17:52:28] DEBUG [booksite.views:79] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 17:52:28] DEBUG [booksite.views:86] Config.txt yok
+[05/Jul/2014 17:53:02] DEBUG [booksite.views:37] hello book detail
+[05/Jul/2014 17:53:03] DEBUG [booksite.views:78] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 17:53:03] DEBUG [booksite.views:79] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 17:53:03] DEBUG [booksite.views:86] Config.txt yok
+[05/Jul/2014 17:54:37] DEBUG [booksite.views:37] hello book detail
+[05/Jul/2014 17:54:39] DEBUG [booksite.views:78] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 17:54:39] DEBUG [booksite.views:79] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 17:54:39] DEBUG [booksite.views:86] Config.txt yok
+[05/Jul/2014 17:55:43] DEBUG [booksite.views:37] hello book detail
+[05/Jul/2014 17:55:44] DEBUG [booksite.views:78] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 17:55:44] DEBUG [booksite.views:79] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 17:55:44] DEBUG [booksite.views:86] Config.txt yok
+[05/Jul/2014 17:56:29] DEBUG [booksite.views:37] hello book detail
+[05/Jul/2014 17:56:30] DEBUG [booksite.views:78] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 17:56:30] DEBUG [booksite.views:79] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 17:56:30] DEBUG [booksite.views:82] Config.txt var
+[05/Jul/2014 17:57:40] DEBUG [booksite.views:37] hello book detail
+[05/Jul/2014 17:57:41] DEBUG [booksite.views:78] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 17:57:41] DEBUG [booksite.views:79] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 17:57:41] DEBUG [booksite.views:82] Config.txt var
+[05/Jul/2014 17:57:57] DEBUG [booksite.views:110] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 17:57:57] DEBUG [booksite.views:111] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 17:57:57] DEBUG [booksite.views:126] File upload fonksiyonu book id=12
+[05/Jul/2014 17:57:57] DEBUG [booksite.views:139] ERROR: [Errno 2] No such file or directory: 'udacity.txt'
+[05/Jul/2014 17:58:52] DEBUG [booksite.views:37] hello book detail
+[05/Jul/2014 17:58:53] DEBUG [booksite.views:78] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 17:58:53] DEBUG [booksite.views:79] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 17:58:53] DEBUG [booksite.views:82] Config.txt var
+[05/Jul/2014 17:58:57] DEBUG [booksite.views:110] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 17:58:57] DEBUG [booksite.views:111] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 17:58:57] DEBUG [booksite.views:126] File upload fonksiyonu book id=12
+[05/Jul/2014 17:58:57] DEBUG [booksite.views:139] ERROR: [Errno 2] No such file or directory: 'udacity.txt'
+[05/Jul/2014 18:01:14] DEBUG [booksite.views:37] hello book detail
+[05/Jul/2014 18:01:16] DEBUG [booksite.views:78] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 18:01:16] DEBUG [booksite.views:79] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 18:01:16] DEBUG [booksite.views:82] Config.txt var
+[05/Jul/2014 18:01:20] DEBUG [booksite.views:110] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 18:01:20] DEBUG [booksite.views:111] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 18:01:20] DEBUG [booksite.views:126] File upload fonksiyonu book id=12
+[05/Jul/2014 18:01:20] DEBUG [booksite.views:139] ERROR: global name 'self' is not defined
+[05/Jul/2014 18:01:55] DEBUG [booksite.views:37] hello book detail
+[05/Jul/2014 18:01:56] DEBUG [booksite.views:78] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 18:01:56] DEBUG [booksite.views:79] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 18:01:56] DEBUG [booksite.views:82] Config.txt var
+[05/Jul/2014 18:02:00] DEBUG [booksite.views:110] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 18:02:00] DEBUG [booksite.views:111] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 18:02:00] DEBUG [booksite.views:126] File upload fonksiyonu book id=12
+[05/Jul/2014 18:02:00] DEBUG [booksite.views:139] ERROR: global name 'path' is not defined
+[05/Jul/2014 18:02:19] DEBUG [booksite.views:37] hello book detail
+[05/Jul/2014 18:02:20] DEBUG [booksite.views:78] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 18:02:20] DEBUG [booksite.views:79] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 18:02:20] DEBUG [booksite.views:82] Config.txt var
+[05/Jul/2014 18:02:25] DEBUG [booksite.views:110] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 18:02:25] DEBUG [booksite.views:111] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 18:02:25] DEBUG [booksite.views:126] File upload fonksiyonu book id=12
+[05/Jul/2014 18:02:25] DEBUG [booksite.views:139] ERROR: global name 'self' is not defined
+[05/Jul/2014 18:02:53] DEBUG [booksite.views:37] hello book detail
+[05/Jul/2014 18:02:54] DEBUG [booksite.views:78] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 18:02:54] DEBUG [booksite.views:79] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 18:02:54] DEBUG [booksite.views:82] Config.txt var
+[05/Jul/2014 18:02:58] DEBUG [booksite.views:110] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 18:02:58] DEBUG [booksite.views:111] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 18:02:58] DEBUG [booksite.views:126] File upload fonksiyonu book id=12
+[05/Jul/2014 18:02:58] DEBUG [booksite.views:139] ERROR: 'module' object has no attribute 'put_file'
+[05/Jul/2014 18:03:52] DEBUG [booksite.views:37] hello book detail
+[05/Jul/2014 18:03:53] DEBUG [booksite.views:78] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 18:03:53] DEBUG [booksite.views:79] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 18:03:53] DEBUG [booksite.views:82] Config.txt var
+[05/Jul/2014 18:03:57] DEBUG [booksite.views:110] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 18:03:57] DEBUG [booksite.views:111] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 18:03:57] DEBUG [booksite.views:126] File upload fonksiyonu book id=12
+[05/Jul/2014 18:04:16] DEBUG [booksite.views:37] hello book detail
+[05/Jul/2014 18:04:17] DEBUG [booksite.views:78] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 18:04:17] DEBUG [booksite.views:79] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 18:04:17] DEBUG [booksite.views:82] Config.txt var
+[05/Jul/2014 18:04:22] DEBUG [booksite.views:110] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 18:04:22] DEBUG [booksite.views:111] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 18:04:22] DEBUG [booksite.views:126] File upload fonksiyonu book id=12
+[05/Jul/2014 18:04:23] DEBUG [booksite.views:139] ERROR: [401] u'Authentication failed'
+[05/Jul/2014 18:08:21] DEBUG [booksite.views:37] hello book detail
+[05/Jul/2014 18:08:22] DEBUG [booksite.views:78] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 18:08:22] DEBUG [booksite.views:79] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 18:08:22] DEBUG [booksite.views:82] Config.txt var
+[05/Jul/2014 18:08:25] DEBUG [booksite.views:118] ERROR: [401] u'Authentication failed'
+[05/Jul/2014 18:08:29] DEBUG [booksite.views:135] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 18:08:29] DEBUG [booksite.views:136] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 18:21:28] DEBUG [booksite.views:37] hello book detail
+[05/Jul/2014 18:21:29] DEBUG [booksite.views:78] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 18:21:29] DEBUG [booksite.views:79] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 18:21:29] DEBUG [booksite.views:82] Config.txt var
+[05/Jul/2014 18:23:05] DEBUG [booksite.views:37] hello book detail
+[05/Jul/2014 18:23:06] DEBUG [booksite.views:78] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 18:23:06] DEBUG [booksite.views:79] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 18:23:06] DEBUG [booksite.views:82] Config.txt var
+[05/Jul/2014 18:23:34] DEBUG [booksite.views:38] hello book detail
+[05/Jul/2014 18:23:35] DEBUG [booksite.views:79] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 18:23:35] DEBUG [booksite.views:80] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 18:23:35] DEBUG [booksite.views:83] Config.txt var
+[05/Jul/2014 18:23:51] DEBUG [booksite.views:113] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 18:23:51] DEBUG [booksite.views:114] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 18:23:51] DEBUG [booksite.views:129] File upload fonksiyonu book id=12
+[05/Jul/2014 18:24:36] DEBUG [booksite.views:38] hello book detail
+[05/Jul/2014 18:24:37] DEBUG [booksite.views:79] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 18:24:37] DEBUG [booksite.views:80] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 18:24:37] DEBUG [booksite.views:83] Config.txt var
+[05/Jul/2014 18:24:42] DEBUG [booksite.views:113] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 18:24:42] DEBUG [booksite.views:114] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 18:24:42] DEBUG [booksite.views:129] File upload fonksiyonu book id=12
+[05/Jul/2014 18:29:11] DEBUG [booksite.views:39] hello book detail
+[05/Jul/2014 18:29:12] DEBUG [booksite.views:80] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 18:29:12] DEBUG [booksite.views:81] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 18:29:12] DEBUG [booksite.views:84] Config.txt var
+[05/Jul/2014 18:29:14] DEBUG [booksite.views:102] req_ses={"secret": "6W7bNEuXBldWl9UW", "key": "lFAgngQSIG1Wr0S4"}
+[05/Jul/2014 18:29:18] DEBUG [booksite.views:115] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 18:29:18] DEBUG [booksite.views:116] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 18:29:18] DEBUG [booksite.views:131] File upload fonksiyonu book id=12
+[05/Jul/2014 18:31:28] DEBUG [booksite.views:40] hello book detail
+[05/Jul/2014 18:31:29] DEBUG [booksite.views:81] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 18:31:29] DEBUG [booksite.views:82] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 18:31:29] DEBUG [booksite.views:85] Config.txt var
+[05/Jul/2014 18:31:31] DEBUG [booksite.views:103] req_ses={"secret": "CnpVzcCwo88YJ8Rs", "key": "LwG2JnXFpgmqbmjM"}
+[05/Jul/2014 18:31:34] DEBUG [booksite.views:116] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 18:31:34] DEBUG [booksite.views:117] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 18:31:34] DEBUG [booksite.views:132] File upload fonksiyonu book id=12
+[05/Jul/2014 18:32:40] DEBUG [booksite.views:40] hello book detail
+[05/Jul/2014 18:32:41] DEBUG [booksite.views:81] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 18:32:41] DEBUG [booksite.views:82] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 18:32:41] DEBUG [booksite.views:85] Config.txt var
+[05/Jul/2014 18:32:43] DEBUG [booksite.views:103] req_ses={"secret": "lPZTkSvAJql6NsOj", "key": "DBThsMOMJQQHonyP"}
+[05/Jul/2014 18:32:45] DEBUG [booksite.views:116] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 18:32:45] DEBUG [booksite.views:117] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 18:32:45] DEBUG [booksite.views:132] File upload fonksiyonu book id=12
+[05/Jul/2014 18:32:45] DEBUG [booksite.views:136] None
+[05/Jul/2014 18:33:29] DEBUG [booksite.views:40] hello book detail
+[05/Jul/2014 18:33:30] DEBUG [booksite.views:81] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 18:33:30] DEBUG [booksite.views:82] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 18:33:30] DEBUG [booksite.views:85] Config.txt var
+[05/Jul/2014 18:33:32] DEBUG [booksite.views:103] req_ses={"secret": "nCIDF3vMzfdWqOnT", "key": "zeWUMilSgsUSvwwJ"}
+[05/Jul/2014 18:33:35] DEBUG [booksite.views:116] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 18:33:35] DEBUG [booksite.views:117] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 18:33:35] DEBUG [booksite.views:132] File upload fonksiyonu book id=12
+[05/Jul/2014 18:37:36] DEBUG [booksite.views:40] hello book detail
+[05/Jul/2014 18:37:37] DEBUG [booksite.views:81] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 18:37:37] DEBUG [booksite.views:82] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 18:37:37] DEBUG [booksite.views:85] Config.txt var
+[05/Jul/2014 18:37:40] DEBUG [booksite.views:103] req_ses={"secret": "5H6F1bDA8TKyInQV", "key": "KZWk6MrkENYYHVfH"}
+[05/Jul/2014 18:37:43] DEBUG [booksite.views:116] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 18:37:43] DEBUG [booksite.views:117] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 18:37:43] DEBUG [booksite.views:132] File upload fonksiyonu book id=12
+[05/Jul/2014 18:37:43] DEBUG [booksite.views:136] <dropbox.session.OAuthToken object at 0x029BC1D0>
+[05/Jul/2014 18:39:21] DEBUG [booksite.views:40] hello book detail
+[05/Jul/2014 18:39:23] DEBUG [booksite.views:81] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 18:39:23] DEBUG [booksite.views:82] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 18:39:23] DEBUG [booksite.views:85] Config.txt var
+[05/Jul/2014 18:39:25] DEBUG [booksite.views:103] req_ses={"secret": "KGZhLj0m7z5HbkvH", "key": "YujhTdRjCsh1Idnu"}
+[05/Jul/2014 18:39:27] DEBUG [booksite.views:116] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 18:39:27] DEBUG [booksite.views:117] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 18:39:27] DEBUG [booksite.views:132] File upload fonksiyonu book id=12
+[05/Jul/2014 18:39:27] DEBUG [booksite.views:160] KGZhLj0m7z5HbkvH ---- YujhTdRjCsh1Idnu
+[05/Jul/2014 18:39:27] DEBUG [booksite.views:136] <dropbox.session.OAuthToken object at 0x027D4850>
+[05/Jul/2014 18:41:35] DEBUG [booksite.views:40] hello book detail
+[05/Jul/2014 18:41:36] DEBUG [booksite.views:81] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 18:41:36] DEBUG [booksite.views:82] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 18:41:36] DEBUG [booksite.views:85] Config.txt var
+[05/Jul/2014 18:41:38] DEBUG [booksite.views:103] req_ses={"secret": "kUL1FerVWJRkAeje", "key": "n1dPt9zyMNKHYAZg"}
+[05/Jul/2014 18:41:41] DEBUG [booksite.views:116] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 18:41:41] DEBUG [booksite.views:117] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 18:41:41] DEBUG [booksite.views:132] File upload fonksiyonu book id=12
+[05/Jul/2014 18:41:41] DEBUG [booksite.views:161] kUL1FerVWJRkAeje ---- n1dPt9zyMNKHYAZg
+[05/Jul/2014 18:41:41] DEBUG [booksite.views:136] <dropbox.session.OAuthToken object at 0x029C2790>
+[05/Jul/2014 18:43:22] DEBUG [booksite.views:40] hello book detail
+[05/Jul/2014 18:43:23] DEBUG [booksite.views:81] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 18:43:23] DEBUG [booksite.views:82] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 18:43:23] DEBUG [booksite.views:85] Config.txt var
+[05/Jul/2014 18:43:26] DEBUG [booksite.views:103] req_ses={"secret": "w9FDnDmPtXSAXkLK", "key": "F7hqyHXJf16XuH3C"}
+[05/Jul/2014 18:43:53] DEBUG [booksite.views:40] hello book detail
+[05/Jul/2014 18:43:54] DEBUG [booksite.views:81] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 18:43:54] DEBUG [booksite.views:82] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 18:43:54] DEBUG [booksite.views:85] Config.txt var
+[05/Jul/2014 18:43:56] DEBUG [booksite.views:103] req_ses={"secret": "xae4GRgoo1nWKIvl", "key": "O3Kzn7tWsal7uMTC"}
+[05/Jul/2014 18:48:01] DEBUG [booksite.views:40] hello book detail
+[05/Jul/2014 18:48:02] DEBUG [booksite.views:81] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 18:48:02] DEBUG [booksite.views:82] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 18:48:02] DEBUG [booksite.views:85] Config.txt var
+[05/Jul/2014 18:48:04] DEBUG [booksite.views:103] req_ses={"secret": "vqgQ07gXxNfIteei", "key": "GKtOWTF2wuvoe7Kv"}
+[05/Jul/2014 18:48:07] DEBUG [booksite.views:116] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 18:48:07] DEBUG [booksite.views:117] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 18:48:07] DEBUG [booksite.views:132] File upload fonksiyonu book id=12
+[05/Jul/2014 18:48:07] DEBUG [booksite.views:161] vqgQ07gXxNfIteei ---- GKtOWTF2wuvoe7Kv
+[05/Jul/2014 18:48:07] DEBUG [booksite.views:136] <dropbox.session.OAuthToken object at 0x029524B0>
+[05/Jul/2014 18:52:24] DEBUG [booksite.views:40] hello book detail
+[05/Jul/2014 18:52:46] DEBUG [booksite.views:81] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 18:52:46] DEBUG [booksite.views:82] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 18:52:46] DEBUG [booksite.views:85] Config.txt var
+[05/Jul/2014 18:52:48] DEBUG [booksite.views:103] req_ses={"secret": "2xMfiDSPrd7iLEDO", "key": "4F3X2DU2oFfPMder"}
+[05/Jul/2014 18:52:52] DEBUG [booksite.views:40] hello book detail
+[05/Jul/2014 18:52:53] DEBUG [booksite.views:81] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 18:52:53] DEBUG [booksite.views:82] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 18:52:53] DEBUG [booksite.views:85] Config.txt var
+[05/Jul/2014 18:52:53] DEBUG [booksite.views:103] req_ses={"secret": "bB3xsGvo8RB3Vqqt", "key": "WP9hnbjmcKJnDTi4"}
+[05/Jul/2014 18:52:57] DEBUG [booksite.views:40] hello book detail
+[05/Jul/2014 18:53:54] DEBUG [booksite.views:81] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 18:53:54] DEBUG [booksite.views:82] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 18:53:54] DEBUG [booksite.views:85] Config.txt var
+[05/Jul/2014 18:53:56] DEBUG [booksite.views:103] req_ses={"secret": "309zCMSUVehTYADi", "key": "P2MuDQtScFzP7eB6"}
+[05/Jul/2014 18:53:59] DEBUG [booksite.views:40] hello book detail
+[05/Jul/2014 18:54:58] DEBUG [booksite.views:40] hello book detail
+[05/Jul/2014 18:54:59] DEBUG [booksite.views:81] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 18:54:59] DEBUG [booksite.views:82] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 18:54:59] DEBUG [booksite.views:85] Config.txt var
+[05/Jul/2014 18:55:01] DEBUG [booksite.views:103] req_ses={"secret": "INHZFfFbacSrOpJC", "key": "P0fxRBSZmFAeovoB"}
+[05/Jul/2014 18:55:04] DEBUG [booksite.views:116] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 18:55:04] DEBUG [booksite.views:117] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 18:55:04] DEBUG [booksite.views:132] File upload fonksiyonu book id=12
+[05/Jul/2014 18:55:04] DEBUG [booksite.views:161] INHZFfFbacSrOpJC ---- P0fxRBSZmFAeovoB
+[05/Jul/2014 18:55:29] DEBUG [booksite.views:40] hello book detail
+[05/Jul/2014 18:55:30] DEBUG [booksite.views:81] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 18:55:30] DEBUG [booksite.views:82] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 18:55:30] DEBUG [booksite.views:85] Config.txt var
+[05/Jul/2014 18:55:32] DEBUG [booksite.views:103] req_ses={"secret": "gGEzAPmLFzxGrsZ5", "key": "ex0gtZ76fE6G8lHe"}
+[05/Jul/2014 18:55:34] DEBUG [booksite.views:116] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 18:55:34] DEBUG [booksite.views:117] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 18:55:34] DEBUG [booksite.views:132] File upload fonksiyonu book id=12
+[05/Jul/2014 18:55:34] DEBUG [booksite.views:161] gGEzAPmLFzxGrsZ5 ---- ex0gtZ76fE6G8lHe
+[05/Jul/2014 18:55:34] DEBUG [booksite.views:136] REQUEST_TOKEN=<dropbox.session.OAuthToken object at 0x02824EF0>
+[05/Jul/2014 19:40:33] DEBUG [booksite.views:40] hello book detail
+[05/Jul/2014 19:40:34] DEBUG [booksite.views:81] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 19:40:34] DEBUG [booksite.views:82] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 19:40:34] DEBUG [booksite.views:85] Config.txt var
+[05/Jul/2014 19:40:36] DEBUG [booksite.views:103] req_ses={"secret": "orOcj42DB0ez95Er", "key": "p4Y4ZObVUpKo7AzL"}
+[05/Jul/2014 19:40:40] DEBUG [booksite.views:116] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 19:40:40] DEBUG [booksite.views:117] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 19:41:23] DEBUG [booksite.views:40] hello book detail
+[05/Jul/2014 19:41:24] DEBUG [booksite.views:81] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 19:41:24] DEBUG [booksite.views:82] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 19:41:24] DEBUG [booksite.views:85] Config.txt var
+[05/Jul/2014 19:41:26] DEBUG [booksite.views:103] req_ses={"secret": "OvOX4800dzmSkxwO", "key": "xGDr40jPGNnpcNtO"}
+[05/Jul/2014 19:41:29] DEBUG [booksite.views:116] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[05/Jul/2014 19:41:29] DEBUG [booksite.views:117] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[05/Jul/2014 19:41:29] DEBUG [booksite.views:133] File upload fonksiyonu book id=12
+[05/Jul/2014 19:41:29] DEBUG [booksite.views:162] OvOX4800dzmSkxwO ---- xGDr40jPGNnpcNtO
+[05/Jul/2014 19:41:29] DEBUG [booksite.views:137] REQUEST_TOKEN=<dropbox.session.OAuthToken object at 0x028C7250>
+[06/Jul/2014 13:25:06] DEBUG [booksite.views:40] hello book detail
+[06/Jul/2014 13:28:49] DEBUG [booksite.views:40] hello book detail
+[06/Jul/2014 13:33:32] DEBUG [booksite.views:40] hello book detail
+[06/Jul/2014 14:24:00] DEBUG [booksite.views:40] hello book detail
+[06/Jul/2014 14:24:10] DEBUG [booksite.views:40] hello book detail
+[06/Jul/2014 14:27:01] DEBUG [booksite.views:40] hello book detail
+[06/Jul/2014 14:28:06] DEBUG [booksite.views:40] hello book detail
+[06/Jul/2014 14:28:35] DEBUG [booksite.views:40] hello book detail
+[06/Jul/2014 14:29:05] DEBUG [booksite.views:40] hello book detail
+[06/Jul/2014 14:29:29] DEBUG [booksite.views:40] hello book detail
+[06/Jul/2014 14:29:48] DEBUG [booksite.views:40] hello book detail
+[06/Jul/2014 14:30:11] DEBUG [booksite.views:40] hello book detail
+[06/Jul/2014 14:30:26] DEBUG [booksite.views:40] hello book detail
+[06/Jul/2014 14:31:19] DEBUG [booksite.views:40] hello book detail
+[06/Jul/2014 14:31:55] DEBUG [booksite.views:40] hello book detail
+[06/Jul/2014 14:32:11] DEBUG [booksite.views:40] hello book detail
+[06/Jul/2014 14:32:41] DEBUG [booksite.views:40] hello book detail
+[06/Jul/2014 14:33:52] DEBUG [booksite.views:40] hello book detail
+[06/Jul/2014 14:34:22] DEBUG [booksite.views:40] hello book detail
+[06/Jul/2014 14:36:44] DEBUG [booksite.views:40] hello book detail
+[06/Jul/2014 15:12:59] DEBUG [booksite.views:40] hello book detail
+[06/Jul/2014 15:13:00] DEBUG [booksite.views:81] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[06/Jul/2014 15:13:00] DEBUG [booksite.views:82] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[06/Jul/2014 15:13:00] DEBUG [booksite.views:85] Config.txt var
+[06/Jul/2014 15:13:03] DEBUG [booksite.views:103] req_ses={"secret": "BzYrkkgOXIWrd0dl", "key": "dQm6m3vyGqyZcg8P"}
+[06/Jul/2014 15:13:05] DEBUG [booksite.views:116] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[06/Jul/2014 15:13:05] DEBUG [booksite.views:117] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[06/Jul/2014 15:13:05] DEBUG [booksite.views:133] File upload fonksiyonu book id=12
+[06/Jul/2014 15:13:05] DEBUG [booksite.views:163] BzYrkkgOXIWrd0dl ---- dQm6m3vyGqyZcg8P
+[06/Jul/2014 15:13:05] DEBUG [booksite.views:137] REQUEST_TOKEN=<dropbox.session.OAuthToken object at 0x02927B30>
+[06/Jul/2014 15:13:05] DEBUG [booksite.views:140] ACT3u50VHu4AAAAAAAAAMJzb-BukyUzJhtLWJ8nTEHRqlcKECp_qE6DGE1ofiDIk
+[06/Jul/2014 15:13:05] DEBUG [booksite.views:150] ERROR: local variable 'path' referenced before assignment
+[06/Jul/2014 15:13:05] DEBUG [booksite.views:40] hello book detail
+[06/Jul/2014 15:14:16] DEBUG [booksite.views:81] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[06/Jul/2014 15:14:16] DEBUG [booksite.views:82] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[06/Jul/2014 15:14:16] DEBUG [booksite.views:85] Config.txt var
+[06/Jul/2014 15:14:18] DEBUG [booksite.views:103] req_ses={"secret": "XCkBVHW5mIzGSP3z", "key": "OEE55U1RLvrdU9i0"}
+[06/Jul/2014 15:14:21] DEBUG [booksite.views:116] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[06/Jul/2014 15:14:21] DEBUG [booksite.views:117] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[06/Jul/2014 15:14:21] DEBUG [booksite.views:133] File upload fonksiyonu book id=12
+[06/Jul/2014 15:14:21] DEBUG [booksite.views:163] XCkBVHW5mIzGSP3z ---- OEE55U1RLvrdU9i0
+[06/Jul/2014 15:14:21] DEBUG [booksite.views:137] REQUEST_TOKEN=<dropbox.session.OAuthToken object at 0x02941D90>
+[06/Jul/2014 15:15:11] DEBUG [booksite.views:40] hello book detail
+[06/Jul/2014 15:15:14] DEBUG [booksite.views:81] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[06/Jul/2014 15:15:14] DEBUG [booksite.views:82] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[06/Jul/2014 15:15:14] DEBUG [booksite.views:85] Config.txt var
+[06/Jul/2014 15:15:16] DEBUG [booksite.views:103] req_ses={"secret": "juwNlOSbf1fAyfrt", "key": "v6sgIqXxJsBzky4X"}
+[06/Jul/2014 15:15:19] DEBUG [booksite.views:116] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[06/Jul/2014 15:15:19] DEBUG [booksite.views:117] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[06/Jul/2014 15:15:19] DEBUG [booksite.views:133] File upload fonksiyonu book id=12
+[06/Jul/2014 15:15:19] DEBUG [booksite.views:163] juwNlOSbf1fAyfrt ---- v6sgIqXxJsBzky4X
+[06/Jul/2014 15:15:19] DEBUG [booksite.views:137] REQUEST_TOKEN=<dropbox.session.OAuthToken object at 0x02925BB0>
+[06/Jul/2014 15:15:19] DEBUG [booksite.views:140] ACT3u50VHu4AAAAAAAAAMJzb-BukyUzJhtLWJ8nTEHRqlcKECp_qE6DGE1ofiDIk
+[06/Jul/2014 15:15:19] DEBUG [booksite.views:150] ERROR: local variable 'path' referenced before assignment
+[06/Jul/2014 15:15:19] DEBUG [booksite.views:40] hello book detail
+[06/Jul/2014 15:16:05] DEBUG [booksite.views:40] hello book detail
+[06/Jul/2014 15:16:06] DEBUG [booksite.views:81] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[06/Jul/2014 15:16:06] DEBUG [booksite.views:82] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[06/Jul/2014 15:16:06] DEBUG [booksite.views:85] Config.txt var
+[06/Jul/2014 15:16:08] DEBUG [booksite.views:103] req_ses={"secret": "Aili8tYhgxOUZa6v", "key": "xxd0uJIqD2IOrRmh"}
+[06/Jul/2014 15:16:11] DEBUG [booksite.views:116] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[06/Jul/2014 15:16:11] DEBUG [booksite.views:117] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[06/Jul/2014 15:16:11] DEBUG [booksite.views:133] File upload fonksiyonu book id=12
+[06/Jul/2014 15:16:11] DEBUG [booksite.views:163] Aili8tYhgxOUZa6v ---- xxd0uJIqD2IOrRmh
+[06/Jul/2014 15:16:11] DEBUG [booksite.views:137] REQUEST_TOKEN=<dropbox.session.OAuthToken object at 0x02938A10>
+[06/Jul/2014 15:16:11] DEBUG [booksite.views:140] ACT3u50VHu4AAAAAAAAAMJzb-BukyUzJhtLWJ8nTEHRqlcKECp_qE6DGE1ofiDIk
+[06/Jul/2014 15:16:11] DEBUG [booksite.views:150] ERROR: [401] u'Authentication failed'
+[06/Jul/2014 15:16:12] DEBUG [booksite.views:40] hello book detail
+[06/Jul/2014 15:16:52] DEBUG [booksite.views:81] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[06/Jul/2014 15:16:52] DEBUG [booksite.views:82] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[06/Jul/2014 15:16:52] DEBUG [booksite.views:85] Config.txt var
+[06/Jul/2014 15:16:54] DEBUG [booksite.views:103] req_ses={"secret": "tFD0mpHkIX33tCWq", "key": "LlgfaYAVI2eIQEmM"}
+[06/Jul/2014 15:16:56] DEBUG [booksite.views:116] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[06/Jul/2014 15:16:56] DEBUG [booksite.views:117] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[06/Jul/2014 15:16:56] DEBUG [booksite.views:133] File upload fonksiyonu book id=12
+[06/Jul/2014 15:16:56] DEBUG [booksite.views:164] tFD0mpHkIX33tCWq ---- LlgfaYAVI2eIQEmM
+[06/Jul/2014 15:16:56] DEBUG [booksite.views:137] REQUEST_TOKEN=<dropbox.session.OAuthToken object at 0x0290DD90>
+[06/Jul/2014 15:16:56] DEBUG [booksite.views:141] ACT3u50VHu4AAAAAAAAAMW3N2F5cPZbRkAhJAE7DM4MKc-JfeUHMFsak6n1TBJWN
+[06/Jul/2014 15:16:57] DEBUG [booksite.views:151] ERROR: [401] u'Authentication failed'
+[06/Jul/2014 15:16:57] DEBUG [booksite.views:40] hello book detail
+[06/Jul/2014 15:17:44] DEBUG [booksite.views:40] hello book detail
+[06/Jul/2014 15:17:46] DEBUG [booksite.views:81] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[06/Jul/2014 15:17:46] DEBUG [booksite.views:82] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[06/Jul/2014 15:17:46] DEBUG [booksite.views:85] Config.txt var
+[06/Jul/2014 15:17:48] DEBUG [booksite.views:103] req_ses={"secret": "BLkcIhJJa572E7rd", "key": "34mFjqSBZXZVJs90"}
+[06/Jul/2014 15:17:50] DEBUG [booksite.views:116] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[06/Jul/2014 15:17:50] DEBUG [booksite.views:117] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[06/Jul/2014 15:17:50] DEBUG [booksite.views:133] File upload fonksiyonu book id=12
+[06/Jul/2014 15:17:50] DEBUG [booksite.views:164] BLkcIhJJa572E7rd ---- 34mFjqSBZXZVJs90
+[06/Jul/2014 15:17:50] DEBUG [booksite.views:137] REQUEST_TOKEN=<dropbox.session.OAuthToken object at 0x02871710>
+[06/Jul/2014 15:18:47] DEBUG [booksite.views:40] hello book detail
+[06/Jul/2014 15:18:50] DEBUG [booksite.views:81] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[06/Jul/2014 15:18:50] DEBUG [booksite.views:82] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[06/Jul/2014 15:18:50] DEBUG [booksite.views:85] Config.txt var
+[06/Jul/2014 15:18:52] DEBUG [booksite.views:103] req_ses={"secret": "DX8CvYxaf3hi6aKk", "key": "SdvlCE0HYW3ENEiI"}
+[06/Jul/2014 15:18:55] DEBUG [booksite.views:116] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[06/Jul/2014 15:18:55] DEBUG [booksite.views:117] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[06/Jul/2014 15:18:55] DEBUG [booksite.views:133] File upload fonksiyonu book id=12
+[06/Jul/2014 15:18:55] DEBUG [booksite.views:164] DX8CvYxaf3hi6aKk ---- SdvlCE0HYW3ENEiI
+[06/Jul/2014 15:18:55] DEBUG [booksite.views:137] REQUEST_TOKEN=<dropbox.session.OAuthToken object at 0x02850B70>
+[06/Jul/2014 15:19:27] DEBUG [booksite.views:40] hello book detail
+[06/Jul/2014 15:19:31] DEBUG [booksite.views:81] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[06/Jul/2014 15:19:31] DEBUG [booksite.views:82] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[06/Jul/2014 15:19:31] DEBUG [booksite.views:85] Config.txt var
+[06/Jul/2014 15:19:33] DEBUG [booksite.views:103] req_ses={"secret": "KSHQ9EqdSPKZ701L", "key": "ZdDbb8F4UB7pzRGT"}
+[06/Jul/2014 15:19:36] DEBUG [booksite.views:116] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[06/Jul/2014 15:19:36] DEBUG [booksite.views:117] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[06/Jul/2014 15:19:36] DEBUG [booksite.views:133] File upload fonksiyonu book id=12
+[06/Jul/2014 15:19:36] DEBUG [booksite.views:164] KSHQ9EqdSPKZ701L ---- ZdDbb8F4UB7pzRGT
+[06/Jul/2014 15:19:36] DEBUG [booksite.views:137] REQUEST_TOKEN=ZdDbb8F4UB7pzRGT
+[06/Jul/2014 15:20:16] DEBUG [booksite.views:40] hello book detail
+[06/Jul/2014 15:20:18] DEBUG [booksite.views:81] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[06/Jul/2014 15:20:18] DEBUG [booksite.views:82] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[06/Jul/2014 15:20:18] DEBUG [booksite.views:85] Config.txt var
+[06/Jul/2014 15:20:20] DEBUG [booksite.views:103] req_ses={"secret": "z70NnEIPMsvB2Wmr", "key": "CvUKJ7iI9N42XuF7"}
+[06/Jul/2014 15:20:22] DEBUG [booksite.views:116] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[06/Jul/2014 15:20:22] DEBUG [booksite.views:117] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[06/Jul/2014 15:20:22] DEBUG [booksite.views:133] File upload fonksiyonu book id=12
+[06/Jul/2014 15:20:22] DEBUG [booksite.views:164] z70NnEIPMsvB2Wmr ---- CvUKJ7iI9N42XuF7
+[06/Jul/2014 15:20:22] DEBUG [booksite.views:137] REQUEST_TOKEN=<dropbox.session.OAuthToken object at 0x02911BB0>
+[06/Jul/2014 15:38:09] DEBUG [booksite.views:40] hello book detail
+[06/Jul/2014 15:38:11] DEBUG [booksite.views:81] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[06/Jul/2014 15:38:11] DEBUG [booksite.views:82] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[06/Jul/2014 15:38:11] DEBUG [booksite.views:85] Config.txt var
+[06/Jul/2014 15:38:13] DEBUG [booksite.views:103] req_ses={"secret": "vHdJ3PorksXgWby5", "key": "jcHaCxMUyUX7lTSR"}
+[06/Jul/2014 15:38:15] DEBUG [booksite.views:116] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[06/Jul/2014 15:38:15] DEBUG [booksite.views:117] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[06/Jul/2014 15:38:15] DEBUG [booksite.views:133] File upload fonksiyonu book id=12
+[06/Jul/2014 15:38:15] DEBUG [booksite.views:164] vHdJ3PorksXgWby5 ---- jcHaCxMUyUX7lTSR
+[06/Jul/2014 15:38:15] DEBUG [booksite.views:137] REQUEST_TOKEN=<dropbox.session.OAuthToken object at 0x028BCB90>
+[06/Jul/2014 15:40:22] DEBUG [booksite.views:40] hello book detail
+[06/Jul/2014 15:40:24] DEBUG [booksite.views:81] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[06/Jul/2014 15:40:24] DEBUG [booksite.views:82] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[06/Jul/2014 15:40:24] DEBUG [booksite.views:85] Config.txt var
+[06/Jul/2014 15:40:26] DEBUG [booksite.views:103] req_ses={"secret": "B6o8ZGTe37dyb8br", "key": "Vd191XPu7J0WPeWj"}
+[06/Jul/2014 15:40:28] DEBUG [booksite.views:116] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[06/Jul/2014 15:40:28] DEBUG [booksite.views:117] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[06/Jul/2014 15:40:28] DEBUG [booksite.views:133] File upload fonksiyonu book id=12
+[06/Jul/2014 15:40:28] DEBUG [booksite.views:164] B6o8ZGTe37dyb8br ---- Vd191XPu7J0WPeWj
+[06/Jul/2014 15:40:28] DEBUG [booksite.views:137] REQUEST_TOKEN=<dropbox.session.OAuthToken object at 0x02877BD0>
+[06/Jul/2014 15:44:59] DEBUG [booksite.views:42] hello book detail
+[06/Jul/2014 15:45:00] DEBUG [booksite.views:83] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[06/Jul/2014 15:45:00] DEBUG [booksite.views:84] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[06/Jul/2014 15:45:00] DEBUG [booksite.views:87] Config.txt var
+[06/Jul/2014 15:45:03] DEBUG [booksite.views:106] req_ses={"secret": "E7bp4rgrBXbqKrMJ", "key": "DPbHfTMxu6AH55Mn"}
+[06/Jul/2014 15:45:06] DEBUG [booksite.views:119] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[06/Jul/2014 15:45:06] DEBUG [booksite.views:120] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[06/Jul/2014 15:45:06] DEBUG [booksite.views:136] File upload fonksiyonu book id=12
+[06/Jul/2014 15:45:06] DEBUG [booksite.views:167] E7bp4rgrBXbqKrMJ ---- DPbHfTMxu6AH55Mn
+[06/Jul/2014 15:45:06] DEBUG [booksite.views:140] REQUEST_TOKEN=<dropbox.session.OAuthToken object at 0x0288DC50>
+[06/Jul/2014 15:46:19] DEBUG [booksite.views:42] hello book detail
+[06/Jul/2014 15:46:20] DEBUG [booksite.views:83] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[06/Jul/2014 15:46:20] DEBUG [booksite.views:84] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[06/Jul/2014 15:46:20] DEBUG [booksite.views:87] Config.txt var
+[06/Jul/2014 15:46:22] DEBUG [booksite.views:106] req_ses={"secret": "A4ur3EO2eQ6CXTHc", "key": "JyrBfPQDQcTTX3rC"}
+[06/Jul/2014 15:46:25] DEBUG [booksite.views:119] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[06/Jul/2014 15:46:25] DEBUG [booksite.views:120] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[06/Jul/2014 15:46:25] DEBUG [booksite.views:137] File upload fonksiyonu book id=12
+[06/Jul/2014 15:46:25] DEBUG [booksite.views:168] A4ur3EO2eQ6CXTHc ---- JyrBfPQDQcTTX3rC
+[06/Jul/2014 15:46:25] DEBUG [booksite.views:141] REQUEST_TOKEN=<dropbox.session.OAuthToken object at 0x02950BD0>
+[06/Jul/2014 15:47:47] DEBUG [booksite.views:42] hello book detail
+[06/Jul/2014 15:47:48] DEBUG [booksite.views:83] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[06/Jul/2014 15:47:48] DEBUG [booksite.views:84] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[06/Jul/2014 15:47:48] DEBUG [booksite.views:87] Config.txt var
+[06/Jul/2014 15:47:50] DEBUG [booksite.views:106] req_ses={"secret": "KYuQ9pQOcqeqjNOq", "key": "w6wZ11GMe1Pfpw9W"}
+[06/Jul/2014 15:47:52] DEBUG [booksite.views:119] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[06/Jul/2014 15:47:52] DEBUG [booksite.views:120] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[06/Jul/2014 15:47:52] DEBUG [booksite.views:137] File upload fonksiyonu book id=12
+[06/Jul/2014 15:47:52] DEBUG [booksite.views:165] KYuQ9pQOcqeqjNOq ---- w6wZ11GMe1Pfpw9W
+[06/Jul/2014 15:47:52] DEBUG [booksite.views:141] REQUEST_TOKEN=<dropbox.session.OAuthToken object at 0x0278CC30>
