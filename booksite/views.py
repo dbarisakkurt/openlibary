@@ -2,6 +2,9 @@ import os
 import json
 from json import JSONEncoder
 from json import JSONDecoder
+import oauth2 as oauth
+import cgi
+import requests
 from django.http import HttpResponse
 from booksite.models import Book, Genre, Author
 from django.shortcuts import render, get_object_or_404, render_to_response
@@ -12,9 +15,11 @@ from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 import logging
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from dropbox import client, rest, session
 from django.core import serializers
 from django.views.decorators.csrf import csrf_exempt, csrf_protect
+from dropbox import client, rest, session
+from ctypes.test.test_random_things import callback_func
+
 
 logger = logging.getLogger(__name__)
 
@@ -39,7 +44,6 @@ def all_books(request):
     return render(request, 'booksite/all_books.html', context)
     
 def book_detail(request, book_id):
-    logger.debug("hello book detail")
     book = get_object_or_404(Book, pk=book_id)
     return render(request, 'booksite/book_detail.html', {'book': book})
 
@@ -71,95 +75,63 @@ def send_message(request):
 
     return render_to_response('booksite/send_message.html', {'form': form}, context)
 
+request_token_url = 'https://api.dropbox.com/1/oauth/request_token'
+access_token_url = 'https://www.dropbox.com/1/oauth/authorize'
+
+DROPBOX_APP_KEY='nnts9944yfscuhd'
+DROPBOX_APP_SECRET='79wvcdjq6m0sr9q'
+DROPBOX_ACCESS_TYPE = 'app_folder'
+
+req_t=None
+sess1=None
     
-def dropbox_integration(request, book_id):
-    APP_KEY = 'nnts9944yfscuhd'
-    APP_SECRET = '79wvcdjq6m0sr9q'
-    ACCESS_TYPE = 'app_folder'
-        
-    if request.method == 'POST':
-        base_path=os.path.dirname(os.path.abspath(__file__))
-        config_path=os.path.join(os.path.join(base_path, 'temp_files'), "config.txt")
-        logger.debug("Base path="+base_path)
-        logger.debug("Config path="+config_path)
-        content=[]
-        if os.path.exists(config_path):
-            logger.debug("Config.txt var")
-            with open(config_path) as the_file:
-                content = the_file.readlines()
-        else:
-            logger.debug("Config.txt yok")
-            with open(config_path, 'w') as the_file:
-                the_file.write(APP_KEY)
-                the_file.write('|')
-                the_file.write(APP_SECRET)
-                
-        config_key=content[0].split('|')[0]
-        config_secret=content[0].split('|')[1]
+def dropbox_login(request):
+    callback_url='http://127.0.0.1:8000/booksite/dropbox_authenticate'
+    # Step 1. Get a request token from Dropbox.
+    sess = session.DropboxSession(DROPBOX_APP_KEY, DROPBOX_APP_SECRET, DROPBOX_ACCESS_TYPE)
+    request_token = sess.obtain_request_token()
+    url = sess.build_authorize_url(request_token, oauth_callback=callback_url)
+    
+    
+    print "URL="+url
+    request.session['request_token']=request_token
+    request.session['session']=sess
+    print "session="+str(sess)
 
-        callback = "http://127.0.0.1:8000/booksite/file_upload"
-         
-        global sess
-        sess = session.DropboxSession(config_key, config_secret, ACCESS_TYPE)
-        request_token = sess.obtain_request_token()
-        request.session['request_token']=json.dumps(request_token.__dict__)
-        logger.debug("req_ses="+request.session['request_token'])
-        
-        url = sess.build_authorize_url(request_token, oauth_callback=callback)
-        
-        request.session['book_id']=book_id
-        
-        return HttpResponseRedirect(url)
-    return HttpResponseRedirect("http://127.0.0.1:8000/booksite/")
+    return HttpResponseRedirect(url)
 
-@csrf_protect   
-def file_upload(request):
-    base_path = os.path.dirname(os.path.abspath(__file__))
-    config_path = os.path.join(os.path.join(base_path, 'temp_files'), "config.txt")
-    logger.debug("Base path=" + base_path)
-    logger.debug("Config path=" + config_path)
-    content = []
-    if os.path.exists(config_path):
-        with open(config_path) as the_file:
-           content = the_file.readlines()
-    else:
-        logger.debug("Config.txt dosyasi bulunamadi.")
-             
-    config_key = content[0].split('|')[0]
-    config_secret = content[0].split('|')[0]
-         
-    ACCESS_TYPE = 'app_folder'
-         
-    sess = session.DropboxSession(config_key, config_secret, ACCESS_TYPE)
-      
-    b_id = request.session['book_id']
-    logger.debug("File upload fonksiyonu book id=" + str(b_id))
-          
-    book = get_object_or_404(Book, pk=1)  # book_id olarak 1 verdim.
-    request_token = JSONDecoder(object_hook=from_json).decode(request.session['request_token'])
-    logger.debug("REQUEST_TOKEN="+str(request_token))
+
+
+def dropbox_authenticate(request):
+    print "dropbox_authenticate fonksiyonu"
+    request_token=request.session['request_token']
+    sess=request.session['session']
+    print "session="+str(sess)
+    
+    print "dropbox_authenticate fonksiyonu2" 
     access_token = sess.obtain_access_token(request_token)
-    #access_token="ACT3u50VHu4AAAAAAAAAMW3N2F5cPZbRkAhJAE7DM4MKc-JfeUHMFsak6n1TBJWN"
-    
-    logger.debug("ACCESS_TOKEN="+str(access_token))
+    print "dropbox_authenticate fonksiyonu"
+    print access_token
     client1 = client.DropboxClient(sess)
+    print "HESAP="+str(client1.account_info())
+    
+    base_path=os.path.dirname(os.path.abspath(__file__))
+    #dosya yukle
     try:
-        base_path1 = os.path.dirname(os.path.abspath(__file__))
-        with open(os.path.join(base_path1, "udacity.txt"), "rb") as fh:
-             res = client1.put_file("udacity.txt", fh)
+        with open(os.path.join(base_path, "udacity.txt"), "rb") as fh: #os.path.join(self.path, self.filename)
+            print "Dosya acildi"
+            path = os.path.join(base_path, "udacity.txt")
+            res = client1.put_file("udacity.txt", fh)
+            print "Dosya yuklendi: ", res
     except Exception, e:
-        logger.debug("ERROR: " + str(e))
-         
-    url = "http://127.0.0.1:8000/booksite/books/12/detail/"
-    return HttpResponseRedirect(url)   
+            print "ERROR: ", e
+    return HttpResponseRedirect('http://127.0.0.1:8000/booksite/')
 
 
-def from_json(json_object):
-    secret=""
-    key=""
-    if 'secret' in json_object:
-        secret=json_object['secret']
-    if 'key' in json_object:
-        key=json_object['key']
-    logger.debug(secret+" ---- "+key)
-    return session.OAuthToken(json_object['secret'], json_object['key'])
+
+def getSize(fileobject):
+    fileobject.seek(0,2) # move the cursor to the end of the file
+    size = fileobject.tell()
+    return size
+
+

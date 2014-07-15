@@ -2,6 +2,8 @@
 
 import os
 
+
+
 PROJECT_DIR = os.path.dirname("C:\\Users\\baris\\workspace\\OpenLibrary\\openlibrary\\settings.py")
 
 DEBUG = True
@@ -132,7 +134,8 @@ INSTALLED_APPS = (
     'booksite',
 )
 
-SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
+#SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
+SESSION_SERIALIZER='django.contrib.sessions.serializers.PickleSerializer'
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'deneme@gmail.com'

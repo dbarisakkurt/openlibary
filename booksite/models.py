@@ -26,7 +26,6 @@ import datetime
 #kod refaktor:
 #dizin isimleri dinamik olacak, şu an hardcode
 #pep8.py denetimi ekle
-#bazı dosyalar .gitignore dosyasına eklenecek
 
 
 

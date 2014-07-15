@@ -1,26 +1,4 @@
-[05/Jul/2014 17:37:15] DEBUG [booksite.views:37] hello book detail
-[05/Jul/2014 17:37:25] DEBUG [booksite.views:71] hello1
-[05/Jul/2014 17:37:25] DEBUG [booksite.views:78] Config file not found.
-[05/Jul/2014 17:38:37] DEBUG [booksite.views:71] hello1
-[05/Jul/2014 17:38:37] DEBUG [booksite.views:75] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
-[05/Jul/2014 17:38:37] DEBUG [booksite.views:76] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
-[05/Jul/2014 17:38:37] DEBUG [booksite.views:80] Config file not found.
-[05/Jul/2014 17:51:00] DEBUG [booksite.views:37] hello book detail
-[05/Jul/2014 17:51:03] DEBUG [booksite.views:78] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
-[05/Jul/2014 17:51:03] DEBUG [booksite.views:79] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
-[05/Jul/2014 17:52:27] DEBUG [booksite.views:37] hello book detail
-[05/Jul/2014 17:52:28] DEBUG [booksite.views:78] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
-[05/Jul/2014 17:52:28] DEBUG [booksite.views:79] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
-[05/Jul/2014 17:52:28] DEBUG [booksite.views:86] Config.txt yok
-[05/Jul/2014 17:53:02] DEBUG [booksite.views:37] hello book detail
-[05/Jul/2014 17:53:03] DEBUG [booksite.views:78] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
-[05/Jul/2014 17:53:03] DEBUG [booksite.views:79] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
-[05/Jul/2014 17:53:03] DEBUG [booksite.views:86] Config.txt yok
-[05/Jul/2014 17:54:37] DEBUG [booksite.views:37] hello book detail
-[05/Jul/2014 17:54:39] DEBUG [booksite.views:78] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
-[05/Jul/2014 17:54:39] DEBUG [booksite.views:79] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
-[05/Jul/2014 17:54:39] DEBUG [booksite.views:86] Config.txt yok
-[05/Jul/2014 17:55:43] DEBUG [booksite.views:37] hello book detail
+
 [05/Jul/2014 17:55:44] DEBUG [booksite.views:78] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
 [05/Jul/2014 17:55:44] DEBUG [booksite.views:79] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
 [05/Jul/2014 17:55:44] DEBUG [booksite.views:86] Config.txt yok
@@ -424,3 +402,124 @@
 [06/Jul/2014 15:47:52] DEBUG [booksite.views:137] File upload fonksiyonu book id=12
 [06/Jul/2014 15:47:52] DEBUG [booksite.views:165] KYuQ9pQOcqeqjNOq ---- w6wZ11GMe1Pfpw9W
 [06/Jul/2014 15:47:52] DEBUG [booksite.views:141] REQUEST_TOKEN=<dropbox.session.OAuthToken object at 0x0278CC30>
+[08/Jul/2014 19:33:33] DEBUG [booksite.views:42] hello book detail
+[08/Jul/2014 19:33:35] DEBUG [booksite.views:83] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[08/Jul/2014 19:33:35] DEBUG [booksite.views:84] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[08/Jul/2014 19:33:36] DEBUG [booksite.views:87] Config.txt var
+[08/Jul/2014 19:33:38] DEBUG [booksite.views:106] req_ses={"secret": "Ev0MP1LAFYG8WyXe", "key": "bzwdjcdJpHpXKv5V"}
+[08/Jul/2014 19:34:58] DEBUG [booksite.views:119] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[08/Jul/2014 19:34:58] DEBUG [booksite.views:120] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[08/Jul/2014 19:34:58] DEBUG [booksite.views:136] File upload fonksiyonu book id=12
+[08/Jul/2014 19:34:58] DEBUG [booksite.views:164] Ev0MP1LAFYG8WyXe ---- bzwdjcdJpHpXKv5V
+[08/Jul/2014 19:34:58] DEBUG [booksite.views:140] REQUEST_TOKEN=<dropbox.session.OAuthToken object at 0x0294E570>
+[08/Jul/2014 19:40:38] DEBUG [booksite.views:44] hello book detail
+[08/Jul/2014 19:40:39] DEBUG [booksite.views:85] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[08/Jul/2014 19:40:39] DEBUG [booksite.views:86] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[08/Jul/2014 19:40:39] DEBUG [booksite.views:89] Config.txt var
+[08/Jul/2014 19:40:41] DEBUG [booksite.views:109] req_ses={"secret": "p8wIk9Oi59hgVdZ4", "key": "nNveEBJLja2dUYMn"}
+[08/Jul/2014 19:40:44] DEBUG [booksite.views:122] Base path=C:\Users\baris\workspace\OpenLibrary\booksite
+[08/Jul/2014 19:40:44] DEBUG [booksite.views:123] Config path=C:\Users\baris\workspace\OpenLibrary\booksite\temp_files\config.txt
+[08/Jul/2014 19:40:44] DEBUG [booksite.views:139] File upload fonksiyonu book id=12
+[08/Jul/2014 19:40:44] DEBUG [booksite.views:167] p8wIk9Oi59hgVdZ4 ---- nNveEBJLja2dUYMn
+[08/Jul/2014 19:40:44] DEBUG [booksite.views:143] REQUEST_TOKEN=<dropbox.session.OAuthToken object at 0x028B4B90>
+[09/Jul/2014 19:09:26] DEBUG [booksite.views:42] hello book detail
+[09/Jul/2014 19:11:58] DEBUG [booksite.views:42] hello book detail
+[09/Jul/2014 19:12:42] DEBUG [booksite.views:42] hello book detail
+[09/Jul/2014 19:13:11] DEBUG [booksite.views:42] hello book detail
+[09/Jul/2014 19:13:32] DEBUG [booksite.views:42] hello book detail
+[09/Jul/2014 19:15:04] DEBUG [booksite.views:42] hello book detail
+[09/Jul/2014 19:15:18] DEBUG [booksite.views:42] hello book detail
+[09/Jul/2014 19:15:41] DEBUG [booksite.views:42] hello book detail
+[09/Jul/2014 19:39:46] DEBUG [booksite.views:42] hello book detail
+[09/Jul/2014 19:40:21] DEBUG [booksite.views:42] hello book detail
+[09/Jul/2014 19:42:15] DEBUG [booksite.views:42] hello book detail
+[09/Jul/2014 20:20:56] DEBUG [booksite.views:42] hello book detail
+[09/Jul/2014 20:21:39] DEBUG [booksite.views:42] hello book detail
+[09/Jul/2014 20:23:12] DEBUG [booksite.views:78] dropbox_integration fonksiyonu ici
+[09/Jul/2014 20:24:03] DEBUG [booksite.views:78] dropbox_integration fonksiyonu ici-1
+[09/Jul/2014 20:24:03] DEBUG [booksite.views:80] dropbox_integration fonksiyonu ici-2
+[09/Jul/2014 20:32:03] DEBUG [booksite.views:78] dropbox_integration fonksiyonu ici-1
+[09/Jul/2014 20:32:03] DEBUG [booksite.views:80] dropbox_integration fonksiyonu ici-2
+[09/Jul/2014 20:33:05] DEBUG [booksite.views:78] dropbox_integration fonksiyonu ici-1
+[09/Jul/2014 20:33:05] DEBUG [booksite.views:80] dropbox_integration fonksiyonu ici-2
+[09/Jul/2014 20:35:19] DEBUG [booksite.views:78] dropbox_integration fonksiyonu ici-1
+[09/Jul/2014 20:35:19] DEBUG [booksite.views:80] dropbox_integration fonksiyonu ici-2
+[09/Jul/2014 20:37:25] DEBUG [booksite.views:78] dropbox_integration fonksiyonu ici-1
+[09/Jul/2014 20:37:25] DEBUG [booksite.views:80] dropbox_integration fonksiyonu ici-2
+[09/Jul/2014 20:37:27] DEBUG [booksite.views:82] dropbox_integration fonksiyonu ici-3
+[09/Jul/2014 20:37:27] DEBUG [booksite.views:84] REDIRECT TO THIS URL=https://www.dropbox.com/1/oauth/authorize?oauth_token=mbi480KVqqOc0WOY
+[09/Jul/2014 20:38:18] DEBUG [booksite.views:78] dropbox_integration fonksiyonu ici-1
+[09/Jul/2014 20:38:18] DEBUG [booksite.views:80] dropbox_integration fonksiyonu ici-2
+[09/Jul/2014 20:38:18] DEBUG [booksite.views:82] dropbox_integration fonksiyonu ici-3
+[09/Jul/2014 20:38:18] DEBUG [booksite.views:84] REDIRECT TO THIS URL=https://www.dropbox.com/1/oauth/authorize?oauth_token=j0CjMR5oHxRjIjwG
+[09/Jul/2014 20:38:53] DEBUG [booksite.views:78] dropbox_integration fonksiyonu ici-1
+[09/Jul/2014 20:38:53] DEBUG [booksite.views:80] dropbox_integration fonksiyonu ici-2
+[09/Jul/2014 20:38:53] DEBUG [booksite.views:82] dropbox_integration fonksiyonu ici-3
+[09/Jul/2014 20:38:53] DEBUG [booksite.views:84] REDIRECT TO THIS URL=https://www.dropbox.com/1/oauth/authorize?oauth_token=xfOfpm136zROGsrm
+[09/Jul/2014 20:39:24] DEBUG [booksite.views:78] dropbox_integration fonksiyonu ici-1
+[09/Jul/2014 20:39:24] DEBUG [booksite.views:80] dropbox_integration fonksiyonu ici-2
+[09/Jul/2014 20:39:27] DEBUG [booksite.views:82] dropbox_integration fonksiyonu ici-3
+[09/Jul/2014 20:39:27] DEBUG [booksite.views:84] REDIRECT TO THIS URL=https://www.dropbox.com/1/oauth/authorize?oauth_token=Y0oG0QapdmOmwDCE
+[09/Jul/2014 20:39:44] DEBUG [booksite.views:78] dropbox_integration fonksiyonu ici-1
+[09/Jul/2014 20:39:44] DEBUG [booksite.views:80] dropbox_integration fonksiyonu ici-2
+[09/Jul/2014 20:39:46] DEBUG [booksite.views:82] dropbox_integration fonksiyonu ici-3
+[09/Jul/2014 20:39:46] DEBUG [booksite.views:84] REDIRECT TO THIS URL=https://www.dropbox.com/1/oauth/authorize?oauth_token=pxsYHj2xNzbCfRU8
+[09/Jul/2014 20:41:18] DEBUG [booksite.views:78] dropbox_integration fonksiyonu ici-1
+[09/Jul/2014 20:41:18] DEBUG [booksite.views:80] dropbox_integration fonksiyonu ici-2
+[09/Jul/2014 20:41:21] DEBUG [booksite.views:82] dropbox_integration fonksiyonu ici-3
+[09/Jul/2014 20:41:21] DEBUG [booksite.views:84] REDIRECT TO THIS URL=https://www.dropbox.com/1/oauth/authorize?oauth_token=ZxmZiEFUoOp9qB5P
+[09/Jul/2014 20:42:39] DEBUG [booksite.views:78] dropbox_integration fonksiyonu ici-1
+[09/Jul/2014 20:42:39] DEBUG [booksite.views:80] dropbox_integration fonksiyonu ici-2
+[09/Jul/2014 20:42:41] DEBUG [booksite.views:82] dropbox_integration fonksiyonu ici-3
+[09/Jul/2014 20:42:41] DEBUG [booksite.views:84] REDIRECT TO THIS URL=https://www.dropbox.com/1/oauth/authorize?oauth_token=wGiFicZ9RudHpn3m
+[09/Jul/2014 20:42:41] DEBUG [booksite.views:85] KEY=wGiFicZ9RudHpn3m
+[09/Jul/2014 20:42:41] DEBUG [booksite.views:86] SECRET=yfuR31TOZL66rGVU
+[09/Jul/2014 20:43:54] DEBUG [booksite.views:78] dropbox_integration fonksiyonu ici-1
+[09/Jul/2014 20:43:54] DEBUG [booksite.views:80] dropbox_integration fonksiyonu ici-2
+[09/Jul/2014 20:43:56] DEBUG [booksite.views:82] dropbox_integration fonksiyonu ici-3
+[09/Jul/2014 20:43:56] DEBUG [booksite.views:84] REDIRECT TO THIS URL=https://www.dropbox.com/1/oauth/authorize?oauth_token=BnockSsRFTYpvRjV
+[09/Jul/2014 20:43:56] DEBUG [booksite.views:85] KEY=BnockSsRFTYpvRjV
+[09/Jul/2014 20:43:56] DEBUG [booksite.views:86] SECRET=yghi2OBCrcsJqyTr
+[09/Jul/2014 20:49:24] DEBUG [booksite.views:78] dropbox_integration fonksiyonu ici-1
+[09/Jul/2014 20:49:24] DEBUG [booksite.views:80] dropbox_integration fonksiyonu ici-2
+[09/Jul/2014 20:49:26] DEBUG [booksite.views:82] dropbox_integration fonksiyonu ici-3
+[09/Jul/2014 20:49:26] DEBUG [booksite.views:84] REDIRECT TO THIS URL=https://www.dropbox.com/1/oauth/authorize?oauth_token=blEADcq9iiiDOn57
+[09/Jul/2014 20:49:26] DEBUG [booksite.views:85] KEY=blEADcq9iiiDOn57
+[09/Jul/2014 20:49:26] DEBUG [booksite.views:86] SECRET=S67GLzZdFEmydcnk
+[09/Jul/2014 20:49:49] DEBUG [booksite.views:78] dropbox_integration fonksiyonu ici-1
+[09/Jul/2014 20:49:49] DEBUG [booksite.views:80] dropbox_integration fonksiyonu ici-2
+[09/Jul/2014 20:49:51] DEBUG [booksite.views:82] dropbox_integration fonksiyonu ici-3
+[09/Jul/2014 20:49:51] DEBUG [booksite.views:84] REDIRECT TO THIS URL=https://www.dropbox.com/1/oauth/authorize?oauth_token=IGvAUFwA8NSDTwcs
+[09/Jul/2014 20:49:51] DEBUG [booksite.views:85] KEY=IGvAUFwA8NSDTwcs
+[09/Jul/2014 20:49:51] DEBUG [booksite.views:86] SECRET=rlbSHM9ihoERCNk8
+[09/Jul/2014 20:50:31] DEBUG [booksite.views:85] KEY=Doch9Z6GBGbMsAu7
+[10/Jul/2014 18:57:21] DEBUG [booksite.views:85] baris
+[10/Jul/2014 18:58:31] DEBUG [booksite.views:85] ayse
+[10/Jul/2014 18:59:34] DEBUG [booksite.views:85] ayse
+[10/Jul/2014 18:59:34] DEBUG [booksite.views:87] {"data": "data"}
+[10/Jul/2014 19:00:45] DEBUG [booksite.views:85] ayse
+[10/Jul/2014 19:03:02] DEBUG [booksite.views:85] ayse
+[10/Jul/2014 19:04:45] DEBUG [booksite.views:85] ayse
+[10/Jul/2014 19:05:56] DEBUG [booksite.views:85] ayse
+[10/Jul/2014 19:05:58] DEBUG [booksite.views:87] oauth_token_secret=TymkklOXarSmFgDO&oauth_token=8qbxB0Ew6Tph8TT8
+[10/Jul/2014 19:22:13] DEBUG [booksite.views:85] ayse
+[10/Jul/2014 19:22:15] DEBUG [booksite.views:87] oauth_token_secret=ced0re34YXee30Np&oauth_token=9wWRDwXf4vdXAYGd
+[10/Jul/2014 19:23:34] DEBUG [booksite.views:85] ayse
+[10/Jul/2014 19:23:36] DEBUG [booksite.views:87] oauth_token_secret=T4oMhR4BmrjYMuYn&oauth_token=PbrnacBGavF69gnX
+[10/Jul/2014 19:24:05] DEBUG [booksite.views:85] ayse
+[10/Jul/2014 19:24:07] DEBUG [booksite.views:87] oauth_token_secret=iqxa2DedmqfLgezC&oauth_token=Rgkx57FFmCGjkAXL
+[10/Jul/2014 19:24:25] DEBUG [booksite.views:85] ayse
+[10/Jul/2014 19:24:27] DEBUG [booksite.views:87] bar=oauth_token_secret=VyqMem048hwaADRz&oauth_token=iYeUCMXnKYUVy9Fi
+[10/Jul/2014 19:26:30] DEBUG [booksite.views:85] ayse
+[10/Jul/2014 19:26:47] DEBUG [booksite.views:85] ayse
+[10/Jul/2014 19:27:26] DEBUG [booksite.views:85] ayse
+[10/Jul/2014 19:29:33] DEBUG [booksite.views:85] ayse
+[10/Jul/2014 19:29:35] DEBUG [booksite.views:87] bar=oauth_token_secret=sBECYyd83f9F6UgC&oauth_token=S7ijgnSAXVTXYmYL
+[10/Jul/2014 19:31:10] DEBUG [booksite.views:85] ayse
+[10/Jul/2014 19:31:39] DEBUG [booksite.views:85] ayse
+[10/Jul/2014 19:35:13] DEBUG [booksite.views:85] ayse
+[10/Jul/2014 19:36:33] DEBUG [booksite.views:85] ayse
+[10/Jul/2014 19:38:17] DEBUG [booksite.views:85] ayse
+[10/Jul/2014 19:39:20] DEBUG [booksite.views:85] ayse
+[10/Jul/2014 19:40:21] DEBUG [booksite.views:85] ayse
+[10/Jul/2014 19:41:15] DEBUG [booksite.views:85] ayse
