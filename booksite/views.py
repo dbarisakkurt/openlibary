@@ -85,7 +85,7 @@ DROPBOX_ACCESS_TYPE = 'app_folder'
 req_t=None
 sess1=None
     
-def dropbox_login(request):
+def dropbox_login(request, book_id):
     callback_url='http://127.0.0.1:8000/booksite/dropbox_authenticate'
     # Step 1. Get a request token from Dropbox.
     sess = session.DropboxSession(DROPBOX_APP_KEY, DROPBOX_APP_SECRET, DROPBOX_ACCESS_TYPE)
@@ -96,6 +96,7 @@ def dropbox_login(request):
     print "URL="+url
     request.session['request_token']=request_token
     request.session['session']=sess
+    request.session['book_id']=book_id
     print "session="+str(sess)
 
     return HttpResponseRedirect(url)
@@ -117,11 +118,21 @@ def dropbox_authenticate(request):
     
     base_path=os.path.dirname(os.path.abspath(__file__))
     #dosya yukle
+    b_id=request.session['book_id']
+    book1 = get_object_or_404(Book, pk=b_id)
+    temp_file_path='C:\\Users\\baris\\workspace\\OpenLibrary\\booksite\\temp_files'
+    
+    print "Kitap yol:"+str(book1.book_file)
+    
+    book_path=os.path.join(temp_file_path, str(book1.book_file))
+    print "Book path="+str(book_path)
+    
     try:
-        with open(os.path.join(base_path, "udacity.txt"), "rb") as fh: #os.path.join(self.path, self.filename)
+        with open(book_path, "rb") as fh: #os.path.join(self.path, self.filename)
             print "Dosya acildi"
-            path = os.path.join(base_path, "udacity.txt")
-            res = client1.put_file("udacity.txt", fh)
+            #path = os.path.join(base_path, "udacity.txt")
+            print "basename="+str(os.path.basename(book_path))
+            res = client1.put_file(os.path.basename(book_path), fh)
             print "Dosya yuklendi: ", res
     except Exception, e:
             print "ERROR: ", e

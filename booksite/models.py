@@ -9,6 +9,9 @@ import datetime
 #TODO: dropbox integration
 #TODO: kitap listeleme sayfalarını güzelleştir: kitabın resmini sağa yasla
 #TODO: kitap ayrıntısı sayfası: kitabın resmini sağa yasla, dropbox butonunu güzelleştir
+#TODO: kitap cover ve book_file ile ilgili şeyleri filan düzenle settingse al. kodu güzelleştir.
+#TODO: kitap yüklendi notu ekle sayfa dönüşüne.
+#TODO: kitap boyutu diye alan ekle
 
 
 #seçimli:

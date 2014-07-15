@@ -59,7 +59,7 @@
 		</div>
 		<br />
 		<div>
-			<form action="/booksite/dropbox_login/"
+			<form action="/booksite/dropbox_login/{{book.id}}/"
 				method="post">
 				{% csrf_token %} <input type="submit" value="Dropbox Yukle" />
 			</form>
