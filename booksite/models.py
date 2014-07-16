@@ -11,7 +11,6 @@ import datetime
 #TODO: kitap ayrıntısı sayfası: kitabın resmini sağa yasla, dropbox butonunu güzelleştir
 #TODO: kitap cover ve book_file ile ilgili şeyleri filan düzenle settingse al. kodu güzelleştir.
 #TODO: kitap yüklendi notu ekle sayfa dönüşüne.
-#TODO: kitap boyutu diye alan ekle
 
 
 #seçimli:
@@ -25,6 +24,8 @@ import datetime
 #TODO: toplam kitap sayısını tüm kitaplar sayfasına ekle.
 #TODO: filter sayfasına pager ekle.
 #TODO: is_new alanı ekle. is_new true ise yanına new badge'i ekle ileride.
+#TODO: admin sayfasında short, long summary text area yap.
+#TODO: admin sayfasında dil default türkçe, lisans belirtilmemiş gelsin.
 
 #kod refaktor:
 #dizin isimleri dinamik olacak, şu an hardcode
@@ -37,6 +38,12 @@ class Genre(models.Model):
 
     def __unicode__(self):
         return self.name
+    
+class License(models.Model):
+    name = models.CharField(max_length=100)
+    
+    def __unicode__(self):
+        return self.name
 
 class Author(models.Model):
     first_name = models.CharField(max_length=30)
@@ -46,7 +53,6 @@ class Author(models.Model):
     biography = models.TextField(max_length=200)
     birthdate = models.DateField(auto_now=True)
     
-
     def __unicode__(self):
         return self.first_name+" "+self.last_name
 
@@ -80,19 +86,18 @@ class Book(models.Model):
     created_by = models.CharField(max_length=100)
     cover_path = models.ImageField(upload_to=change_name)
     book_file = models.FileField(upload_to=change_name2)
-    short_summary = models.CharField(max_length=100)
-    long_summary = models.CharField(max_length=300)
+    short_summary = models.CharField(max_length=400)
+    long_summary = models.CharField(max_length=800)
     orginal_title = models.CharField(max_length=100)
     orginal_language = models.CharField(max_length=100)
     language = models.CharField(max_length=100)
-    license = models.CharField(max_length=100)
+    license = models.ForeignKey(License)
     publish_date = models.DateField(auto_now=True)
+    book_size = models.FloatField()
+    additional_note = models.CharField(max_length=400)
 
     def __unicode__(self):
         return self.title
-
-
-
 
 
 class ContactForm(forms.Form):

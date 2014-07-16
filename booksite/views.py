@@ -2,9 +2,6 @@ import os
 import json
 from json import JSONEncoder
 from json import JSONDecoder
-import oauth2 as oauth
-import cgi
-import requests
 from django.http import HttpResponse
 from booksite.models import Book, Genre, Author
 from django.shortcuts import render, get_object_or_404, render_to_response
@@ -18,12 +15,11 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.core import serializers
 from django.views.decorators.csrf import csrf_exempt, csrf_protect
 from dropbox import client, rest, session
-from ctypes.test.test_random_things import callback_func
-
+import requests
+import oauth2 as oauth
+import cgi
 
 logger = logging.getLogger(__name__)
-
-
  
 def all_books(request):
     all_books_list = Book.objects.all().order_by('-title')[:]
@@ -81,9 +77,6 @@ access_token_url = 'https://www.dropbox.com/1/oauth/authorize'
 DROPBOX_APP_KEY='nnts9944yfscuhd'
 DROPBOX_APP_SECRET='79wvcdjq6m0sr9q'
 DROPBOX_ACCESS_TYPE = 'app_folder'
-
-req_t=None
-sess1=None
     
 def dropbox_login(request, book_id):
     callback_url='http://127.0.0.1:8000/booksite/dropbox_authenticate'
@@ -137,12 +130,4 @@ def dropbox_authenticate(request):
     except Exception, e:
             print "ERROR: ", e
     return HttpResponseRedirect('http://127.0.0.1:8000/booksite/')
-
-
-
-def getSize(fileobject):
-    fileobject.seek(0,2) # move the cursor to the end of the file
-    size = fileobject.tell()
-    return size
-
 
