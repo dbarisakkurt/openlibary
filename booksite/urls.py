@@ -14,5 +14,4 @@ urlpatterns = patterns('',
     url(r'^authors/(?P<author_id>\d+)/detail/$', views.author_detail, name='author_detail'),
     url(r'^dropbox_login/(?P<book_id>\d+)/$', views.dropbox_login, name='dropbox_login'),
     url(r'^dropbox_authenticate/?$',views.dropbox_authenticate, name='dropbox_authenticate'),
-    #url(r'^file_upload/?$',views.file_upload, name='file_upload'),
 )

@@ -30,42 +30,53 @@
 			</ul>
 			<h3 class="text-muted">Açık Kütüphane (Beta)</h3>
 		</div>
+		{% if dropbox_load %}
+		<div class="alert alert-success">Kitap Dropbox hesabınıza
+			eklendi.</div>
+		{% else %}
+		<p></p>
+		{% endif %}
 		<div class="main">
 			<h4>{{ book.title }}</h4>
 			<p style="font-weight: bold;">Özet:</p>
-			  <p> {{ book.long_summary }} </p>
+			<p>{{ book.long_summary }}</p>
 			<p style="font-weight: bold;">Sayfa sayısı:</p>
-			  <p> {{ book.page_number }} </p>
-			<p style="font-weight: bold;">Yazar:</p>
-			<ul>
-				{% for author in book.authors.all %}
-				<li><a href="{% url 'author_detail' author.id %}">{{ author.first_name }} {{ author.last_name }}</a></li> {% endfor %}
-			</ul>
-			<p style="font-weight: bold;">Kategori:</p>
-			<ul>
-			{% for genre in book.genres.all %}
-			<li>{{ genre.name }}</li> {% endfor %}
-			</ul> 
-			<p style="font-weight: bold;">Dil:</p>
-			  <p> {{ book.language }} </p>
-			<p style="font-weight: bold;">Lisans:</p>
-			  <p> {{ book.license }} </p>
-			<img
-				src="/temp_files/{{book.cover_path}}" alt="Kitap Kapagi" width="100"
-				height="140" />
-				<br />
-			<a
-				href="/temp_files/{{book.book_file}}">İndir</a>
-		</div>
-		<br />
-		<div>
-			<form action="/booksite/dropbox_login/{{book.id}}/"
-				method="post">
-				{% csrf_token %} <input type="submit" value="Dropbox Yukle" />
-			</form>
-		</div>
+			<p>{{ book.page_number }}</p>
+			<div style="overflow: hidden; float: left" class="item-column1">
 
-<p> Bu kitap Açık Kütüphane'ye {{ book.date_created }} tarihinde eklenmiştir. </p>	
+				<p style="font-weight: bold;">Yazar:</p>
+				<ul>
+					{% for author in book.authors.all %}
+					<li><a href="{% url 'author_detail' author.id %}"> 
+					{{ author.first_name }} {{ author.last_name }}</a></li> {% endfor %}
+				</ul>
+				<p style="font-weight: bold;">Kategori:</p>
+				<ul>
+					{% for genre in book.genres.all %}
+					<li>{{ genre.name }}</li> {% endfor %}
+				</ul>
+				<p style="font-weight: bold;">Dil:</p>
+				<p>{{ book.language }}</p>
+				<p style="font-weight: bold;">Lisans:</p>
+				<p>{{ book.license }}</p>
+
+				<a href="http://127.0.0.1:8000/documents/{{book.book_file}}"
+					class="btn btn-primary">İndir</a>
+				<div>
+					<form action="/booksite/dropbox_login/{{book.id}}/" method="post">
+						{% csrf_token %} <input type="submit" value="Dropbox'a Yükle"
+							class="btn btn-success" />
+					</form>
+
+				</div>
+				<div>Bu kitap Açık Kütüphane'ye {{ book.date_created }} tarihinde
+					eklenmiştir.</div>
+			</div>
+			<div style="overflow: hidden; text-align: right" class="item-column2">
+				<img src="http://127.0.0.1:8000/documents/{{book.cover_path}}"
+					alt="Kitap Kapağı" width="300" height="350" />
+			</div>
+		</div>
 
 		<div class="footer">
 			<p>&copy; 2014 - D. Barış Akkurt tarafından geliştirilmektedir.

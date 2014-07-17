@@ -4,33 +4,23 @@ from django.db import models
 from django import forms
 import datetime
 
-
-#zorunlu:
-#TODO: dropbox integration
-#TODO: kitap listeleme sayfalarını güzelleştir: kitabın resmini sağa yasla
-#TODO: kitap ayrıntısı sayfası: kitabın resmini sağa yasla, dropbox butonunu güzelleştir
-#TODO: kitap cover ve book_file ile ilgili şeyleri filan düzenle settingse al. kodu güzelleştir.
-#TODO: kitap yüklendi notu ekle sayfa dönüşüne.
-
-
-#seçimli:
+#version2:
+#TODO: toplam kitap sayısını tüm kitaplar sayfasına ekle.
+#TODO: kitapları alfabetik olarak sırala tüm kitaplar sayfasında
 #TODO: iletişim formunu güzelleştir, bootstrap stilleri
 #TODO: python ile kitap listesini pdf olarak dışarı aktarma.
 #TODO: base template kullan.
-#TODO: django sitemap yap.
-#TODO: short story ve long story alanlarını genişlet admin sayfasında ve bu kısma daha çok veri girilebilsin veritabanı.
-#TODO: kitapları alfabetik olarak sırala tüm kitaplar sayfasında
 #TODO: eklenme tarihi, alfabetik vs. gibi sıralama türleri ekle.
-#TODO: toplam kitap sayısını tüm kitaplar sayfasına ekle.
+#TODO: admin sayfasında short, long summary text area yap.
+#TODO: haber ekleme kısmının olduğu haberler kısmını koy
+#TODO: pep8.py denetimi ekle
+
+#seçimli:
+#TODO: kitap url'lerini düzelt, dinamik olsun.
+#TODO: django sitemap yap.
 #TODO: filter sayfasına pager ekle.
 #TODO: is_new alanı ekle. is_new true ise yanına new badge'i ekle ileride.
-#TODO: admin sayfasında short, long summary text area yap.
 #TODO: admin sayfasında dil default türkçe, lisans belirtilmemiş gelsin.
-
-#kod refaktor:
-#dizin isimleri dinamik olacak, şu an hardcode
-#pep8.py denetimi ekle
-
 
 
 class Genre(models.Model):
@@ -66,7 +56,7 @@ class Book(models.Model):
         hour=datetime.datetime.today().hour
         minute=datetime.datetime.today().minute
         second=datetime.datetime.today().second
-        return "documents/covers/"+unicode(str(year)+str(month)+str(day)+str(hour)+str(minute)+str(second))+file_name
+        return "cover_"+unicode(str(year)+str(month)+str(day)+str(hour)+str(minute)+str(second))+file_name
 
     def change_name2(instance, file_name):
         year=datetime.datetime.today().year
@@ -75,7 +65,7 @@ class Book(models.Model):
         hour=datetime.datetime.today().hour
         minute=datetime.datetime.today().minute
         second=datetime.datetime.today().second
-        return "documents/docs/"+unicode(str(year)+str(month)+str(day)+str(hour)+str(minute)+str(second))+file_name
+        return "book_"+unicode(str(year)+str(month)+str(day)+str(hour)+str(minute)+str(second))+file_name
 
     title = models.CharField(max_length=100)
     authors = models.ManyToManyField(Author)

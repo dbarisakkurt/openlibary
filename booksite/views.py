@@ -1,12 +1,11 @@
 import os
 import json
-from json import JSONEncoder
-from json import JSONDecoder
 from django.http import HttpResponse
 from booksite.models import Book, Genre, Author
 from django.shortcuts import render, get_object_or_404, render_to_response
 from django.template import RequestContext
 from models import ContactForm
+from django.shortcuts import redirect
 from django.core.mail import send_mail
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
@@ -40,8 +39,16 @@ def all_books(request):
     return render(request, 'booksite/all_books.html', context)
     
 def book_detail(request, book_id):
+    if not request.session.has_key('dropbox_load1'):
+        sonuc=False
+    else:
+        sonuc=request.session['dropbox_load1']
     book = get_object_or_404(Book, pk=book_id)
-    return render(request, 'booksite/book_detail.html', {'book': book})
+    if sonuc==True:
+        request.session.pop("dropbox_load1", None)
+        return render(request, 'booksite/book_detail.html', {'book': book, 'dropbox_load': True })
+    else:
+        return render(request, 'booksite/book_detail.html', {'book': book, 'dropbox_load': False })
 
 def author_detail(request, author_id):
     author = get_object_or_404(Author, pk=author_id)
@@ -90,6 +97,8 @@ def dropbox_login(request, book_id):
     request.session['request_token']=request_token
     request.session['session']=sess
     request.session['book_id']=book_id
+    request.session['callback_url']=request.get_full_path()
+    print "su anki url="+str(request.get_full_path())
     print "session="+str(sess)
 
     return HttpResponseRedirect(url)
@@ -113,7 +122,7 @@ def dropbox_authenticate(request):
     #dosya yukle
     b_id=request.session['book_id']
     book1 = get_object_or_404(Book, pk=b_id)
-    temp_file_path='C:\\Users\\baris\\workspace\\OpenLibrary\\booksite\\temp_files'
+    temp_file_path='C:\\Users\\baris\\workspace\\OpenLibrary\\booksite\\documents'
     
     print "Kitap yol:"+str(book1.book_file)
     
@@ -129,5 +138,11 @@ def dropbox_authenticate(request):
             print "Dosya yuklendi: ", res
     except Exception, e:
             print "ERROR: ", e
-    return HttpResponseRedirect('http://127.0.0.1:8000/booksite/')
+            
+    book = get_object_or_404(Book, pk=b_id)
+    callback_url="http://127.0.0.1:8000/booksite/books/"+str(b_id)+"/detail/"
+    dResult=True
+    request.session['dropbox_load1']=dResult
+    return redirect(callback_url)
+    #return render(request, 'booksite/book_detail.html', {'book': book, 'dropbox_load':dResult})
 
