@@ -4,6 +4,9 @@ from django.db import models
 from django import forms
 import datetime
 
+#all_book_list ve book_detail i arayüzü düzelt.
+#book detail'e kitap boyutunu, web sitesini ve ek bilgiyi ekle
+
 #version2:
 #TODO: toplam kitap sayısını tüm kitaplar sayfasına ekle.
 #TODO: kitapları alfabetik olarak sırala tüm kitaplar sayfasında

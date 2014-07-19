@@ -59,6 +59,10 @@
 				<p>{{ book.language }}</p>
 				<p style="font-weight: bold;">Lisans:</p>
 				<p>{{ book.license }}</p>
+				<p style="font-weight: bold;">Kitap boyutu:</p>
+				<p>{{ book.book_size }} KB</p>
+				<p style="font-weight: bold;">İnternet sayfası:</p>
+				<p>{{ book.book_url }}</p>
 
 				<a href="http://127.0.0.1:8000/documents/{{book.book_file}}"
 					class="btn btn-primary">İndir</a>
@@ -67,7 +71,9 @@
 						{% csrf_token %} <input type="submit" value="Dropbox'a Yükle"
 							class="btn btn-success" />
 					</form>
-
+<div>
+<p style="font-weight: bold;">Ek bilgi:</p>
+				<p>{{ book.additional_note }}</p></div>
 				</div>
 				<div>Bu kitap Açık Kütüphane'ye {{ book.date_created }} tarihinde
 					eklenmiştir.</div>
@@ -77,6 +83,7 @@
 					alt="Kitap Kapağı" width="300" height="350" />
 			</div>
 		</div>
+		
 
 		<div class="footer">
 			<p>&copy; 2014 - D. Barış Akkurt tarafından geliştirilmektedir.
