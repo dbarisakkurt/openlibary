@@ -4,6 +4,10 @@ from django.db import models
 from django import forms
 import datetime
 
+
+#statik dosyaların yönetimi?
+#settings.py dosyasındaki şeyler. 
+
 #version2:
 #TODO: toplam kitap sayısını tüm kitaplar sayfasına ekle.
 #TODO: kitapları alfabetik olarak sırala tüm kitaplar sayfasında

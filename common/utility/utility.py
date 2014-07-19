@@ -45,7 +45,9 @@ class FileOperation(object):
         
 def getDropboxAppKeyAndSecret():
     """return the app key and app secret of dropbox from the file"""
-    file_name='dropbox.txt'
+    root=os.path.join(os.path.join(os.path.dirname(__file__), os.pardir), os.pardir)
+    file_name=os.path.join(root, 'dropbox_config.txt') 
+    #file_name='dropbox_config.txt'
     output=''
     with open(file_name, 'r') as my_file:
         output = my_file.read()

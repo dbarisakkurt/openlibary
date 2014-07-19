@@ -17,6 +17,7 @@ from dropbox import client, rest, session
 import requests
 import oauth2 as oauth
 import cgi
+from common.utility import utility
 
 logger = logging.getLogger(__name__)
  
@@ -78,51 +79,41 @@ def send_message(request):
 
     return render_to_response('booksite/send_message.html', {'form': form}, context)
 
-request_token_url = 'https://api.dropbox.com/1/oauth/request_token'
-access_token_url = 'https://www.dropbox.com/1/oauth/authorize'
-
-DROPBOX_APP_KEY='nnts9944yfscuhd'
-DROPBOX_APP_SECRET='79wvcdjq6m0sr9q'
+#DROPBOX_APP_KEY='nnts9944yfscuhd'
+#DROPBOX_APP_SECRET='79wvcdjq6m0sr9q'
 DROPBOX_ACCESS_TYPE = 'app_folder'
     
 def dropbox_login(request, book_id):
     callback_url='http://127.0.0.1:8000/booksite/dropbox_authenticate'
+    tokens=utility.getDropboxAppKeyAndSecret()
+    
+    print tokens[0]
+    print tokens[1]
     # Step 1. Get a request token from Dropbox.
-    sess = session.DropboxSession(DROPBOX_APP_KEY, DROPBOX_APP_SECRET, DROPBOX_ACCESS_TYPE)
+    sess = session.DropboxSession(tokens[0], tokens[1], DROPBOX_ACCESS_TYPE)
     request_token = sess.obtain_request_token()
     url = sess.build_authorize_url(request_token, oauth_callback=callback_url)
-    
-    
-    print "URL="+url
+
     request.session['request_token']=request_token
     request.session['session']=sess
     request.session['book_id']=book_id
     request.session['callback_url']=request.get_full_path()
-    print "su anki url="+str(request.get_full_path())
-    print "session="+str(sess)
-
     return HttpResponseRedirect(url)
 
 
-
 def dropbox_authenticate(request):
-    print "dropbox_authenticate fonksiyonu"
+    print "auth fonk."
     request_token=request.session['request_token']
     sess=request.session['session']
-    print "session="+str(sess)
-    
-    print "dropbox_authenticate fonksiyonu2" 
+     
     access_token = sess.obtain_access_token(request_token)
-    print "dropbox_authenticate fonksiyonu"
-    print access_token
     client1 = client.DropboxClient(sess)
-    print "HESAP="+str(client1.account_info())
     
     base_path=os.path.dirname(os.path.abspath(__file__))
     #dosya yukle
     b_id=request.session['book_id']
     book1 = get_object_or_404(Book, pk=b_id)
-    temp_file_path='C:\\Users\\baris\\workspace\\OpenLibrary\\booksite\\documents'
+    temp_file_path=os.path.join(base_path, 'documents')
     
     print "Kitap yol:"+str(book1.book_file)
     
@@ -130,9 +121,8 @@ def dropbox_authenticate(request):
     print "Book path="+str(book_path)
     
     try:
-        with open(book_path, "rb") as fh: #os.path.join(self.path, self.filename)
+        with open(book_path, "rb") as fh:
             print "Dosya acildi"
-            #path = os.path.join(base_path, "udacity.txt")
             print "basename="+str(os.path.basename(book_path))
             res = client1.put_file(os.path.basename(book_path), fh)
             print "Dosya yuklendi: ", res
@@ -144,5 +134,4 @@ def dropbox_authenticate(request):
     dResult=True
     request.session['dropbox_load1']=dResult
     return redirect(callback_url)
-    #return render(request, 'booksite/book_detail.html', {'book': book, 'dropbox_load':dResult})
 

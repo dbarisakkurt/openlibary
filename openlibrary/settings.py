@@ -2,28 +2,27 @@
 
 import os
 
+PROJECT_DIR = os.path.join(os.path.dirname(__file__), os.pardir)
 
-
-PROJECT_DIR = os.path.dirname("C:\\Users\\baris\\workspace\\OpenLibrary\\openlibrary\\settings.py")
+import logging
+logger = logging.getLogger(__file__)
+logger.debug(PROJECT_DIR) 
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
-ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
-)
-
+ADMINS = ()
 MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'C:\\Users\\baris\\workspace\\OpenLibrary\\openlibrarydb',                      # Or path to database file if using sqlite3.
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': PROJECT_DIR+'/openlibrarydb',
         # The following settings are not used with sqlite3:
         'USER': '',
         'PASSWORD': '',
-        'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
-        'PORT': '',                      # Set to empty string for default.
+        'HOST': '',                   
+        'PORT': '',                   
     }
 }
 
@@ -56,7 +55,7 @@ USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/var/www/example.com/media/"
-MEDIA_ROOT = 'C:\\Users\\baris\\workspace\\OpenLibrary\\booksite\\documents'
+MEDIA_ROOT = os.path.join(os.path.join(PROJECT_DIR, "booksite"), 'documents')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -78,7 +77,7 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-os.path.join(PROJECT_DIR, 'staticfiles'),
+os.path.join(os.path.join(PROJECT_DIR, 'openlibrary'), 'staticfiles'),
 )
 
 # List of finder classes that know how to find static files in
@@ -127,14 +126,11 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # Uncomment the next line to enable the admin:
     'django.contrib.admin',
-    # Uncomment the next line to enable admin documentation:
-    # 'django.contrib.admindocs',
+    'django.contrib.admindocs',
     'booksite',
 )
 
-#SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
 SESSION_SERIALIZER='django.contrib.sessions.serializers.PickleSerializer'
 
 EMAIL_HOST = 'smtp.gmail.com'
@@ -149,8 +145,6 @@ EMAIL_USE_TLS = True
 # See http://docs.djangoproject.com/en/dev/topics/logging for
 # more details on how to customize your logging configuration.
 # settings.py
-
-SITE_ROOT="C:\\Users\\baris\\workspace\\OpenLibrary\\"
 
 
 LOGGING = {
@@ -170,7 +164,7 @@ LOGGING = {
         'logfile': {
             'level':'DEBUG',
             'class':'logging.handlers.RotatingFileHandler',
-            'filename': SITE_ROOT + "/logfile",
+            'filename': PROJECT_DIR + "/logfile",
             'maxBytes': 50000,
             'backupCount': 2,
             'formatter': 'standard',
