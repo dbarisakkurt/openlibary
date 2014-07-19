@@ -1,114 +1,121 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ücretsiz e-kitapların bulunduğu internet sitesi">
-    <meta name="author" content="D. Barış Akkurt">
-    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description"
+	content="Ücretsiz e-kitapların bulunduğu internet sitesi">
+<meta name="author" content="D. Barış Akkurt">
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 
-    <title>Açık Kütüphane</title>
+<title>Açık Kütüphane</title>
 
-    <!-- Bootstrap core CSS -->
-    <!--<link href="../../dist/css/bootstrap.css" rel="stylesheet">-->
-    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+<!-- Bootstrap core CSS -->
+<!--<link href="../../dist/css/bootstrap.css" rel="stylesheet">-->
+<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
 
-    <!-- Custom styles for this template -->
-    <link href="{% static 'css/jumbotron-narrow.css' %}" rel="stylesheet">
-  </head>
+<!-- Custom styles for this template -->
+<link href="{% static 'css/jumbotron-narrow.css' %}" rel="stylesheet">
+</head>
 
-  <body>
-    <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li><a href="/booksite/">Ana Sayfa</a></li>
-          <li class="active"><a href="/booksite/all_books/">Tüm Kitaplar</a></li>
-          <li><a href="/booksite/about/">Hakkında</a></li>
-        </ul>
-        <h3 class="text-muted">Açık Kütüphane (Beta)</h3>
-      </div>
+<body>
+	<div class="container">
+		<div class="header">
+			<ul class="nav nav-pills pull-right">
+				<li><a href="/booksite/">Ana Sayfa</a></li>
+				<li class="active"><a href="/booksite/all_books/">Tüm
+						Kitaplar</a></li>
+				<li><a href="/booksite/about/">Hakkında</a></li>
+			</ul>
+			<h3 class="text-muted">Açık Kütüphane (Beta)</h3>
+		</div>
 
-      <div class="main">
+		<div class="main">
 
-		<div class="row">
-		<form method="get" action="/booksite/filter_genre">
-		<div class="col-md-4">
-			<!--{% csrf_token %}-->
-			<select name="genre" class="form-control">
-				{% for genre in all_genres_list %}
-					<option value="{{genre.id}}">{{genre.name}}</option>
-				{% endfor %}
-			</select>
+			<div class="row">
+				<form method="get" action="/booksite/filter_genre">
+					<div class="col-md-4">
+						<select name="genre" class="form-control"> 
+						{% for genre in all_genres_list %}
+							<option value="{{genre.id}}">{{genre.name}}</option> {% endfor %}
+						</select>
+					</div>
+					<div class="col-md-4">
+						<input type="submit" value="Göster" class="form-control">
+					</div>
+				</form>
 			</div>
-		<div class="col-md-4">  
-		<input type="submit" value="Göster" class="form-control">
+			<br /> {% if all_books_list %}
+			<div class="panel panel-default">
+				<div class="panel-heading">Tüm Kitaplar</div>
+				<div class="panel-body">
+					<ul class="list-gruop">
+						{% for book in all_books_list %}
+						<li class="list-group-item">
+							<div style="width: 100%;">
+								<h4>
+									<a href="{% url 'book_detail' book.id %}">{{ book.title }}</a>
+									<span class="label label-danger">Yeni</span>
+								</h4>
+							</div>
+							<div>
+								<p style="font-weight: bold;">Tanıtım:</p>
+								<p>{{ book.short_summary }}</p>
+							</div>
+							<div style="overflow: hidden; float:left; width:70%;"  class="item-column1">
+								
+								<p style="font-weight: bold;">Yazarlar:
+								<ul>
+									{% for author in book.authors.all %}
+									<li style="display: inline;" {% if not forloop.last %}><a href="{% url 'author_detail' author.id %}">
+									
+									{{ author.first_name }} {{ author.last_name }}</a>, </li>
+									{% endif %}
+									<li style="display: inline;" {% if forloop.last %} >
+										<a href="{% url 'author_detail' author.id %}">
+										{{ author.first_name }} {{ author.last_name }}</a></li>
+									</li>
+									{% endif %} 
+									{% endfor %}
+								</ul>
+								</p>
+								<p style="font-weight: bold;">Lisans:</p>
+								<p>{{ book.license }}</p>
+							</div>
+							<div style="overflow: hidden; overflow: hidden; text-align: right" class="item-column2">
+								<img src="http://127.0.0.1:8000/documents/{{book.cover_path}}"
+									alt="Kitap Kapagi" width="100" height="140" />
+							</div>
+						</li> 
+						{% endfor %}
+					</ul>
+				</div>
+				{% else %}
+				<p>Herhangi bir kitap bulunmamaktadır.</p>
+				{% endif %}
+			</div>
+
+			<div class="pagination">
+				<ul class="pager">
+					{% if all_books_list.has_previous %}
+					<li><a href="?page={{ all_books_list.previous_page_number }}">Önceki</a></li>
+					{% endif %}
+					<span class="current">  
+						{{ all_books_list.number }} / {{ all_books_list.paginator.num_pages }} 
+					</span> 
+					{% if all_books_list.has_next %}
+					<li><a href="?page={{ all_books_list.next_page_number }}">Sonraki</a></li>
+					{% endif %}
+				</ul>
+			</div>
 		</div>
+
+		<div class="footer">
+			<p>&copy; 2014 - D. Barış Akkurt tarafından geliştirilmektedir.
+				Kitapların içerikleri yazarlarına aittir.</p>
 		</div>
-		
-		</form>
-		
-		<br />
-
-		{% if all_books_list %}
-		<div class="panel panel-default">
-		<div class="panel-heading">Tüm Kitaplar</div>
-		<div class="panel-body">
-		<ul class="list-gruop">
-		  {% for book in all_books_list %}
-			<li class="list-group-item">
-			<div style="clear:both; width: 100%;">
-			  <h4><a href="{% url 'book_detail' book.id %}">{{ book.title }}</a> <span class="label label-danger">Yeni</span></h4>
-			  <p> Tanıtım: </p>
-			  <p> {{ book.short_summary }} </p>
-			  </div>
-			  <div style="width=70%;overflow:hidden;float:left" class="item-column1">
-				  <p>
-					  Yazarlar: 
-					  <ul>
-					  {% for author in book.authors.all %}
-					    <li><a href="{% url 'author_detail' author.id %}">{{ author.first_name }} {{ author.last_name }}</a></li>
-					  {% endfor %}
-					  </ul>
-				  </p>
-				  <p> Lisans: </p>
-				  <p> {{ book.license }} </p>
-			  </div>
-			  <div style="width=30%;overflow:hidden;text-align:right"  class="item-column2">
-			  	  <img src="http://127.0.0.1:8000/documents/{{book.cover_path}}" alt="Kitap Kapagi" width="100" height="140" />
-			  </div>
-			</li>
-		  {% endfor %}
-		</ul>
-		</div>
-		{% else %}
-		  <p>Herhangi bir kitap bulunmamaktadır.</p>
-		{% endif %}
-		
-      </div>
-      
-      <div class="pagination">
-    		<ul class="pager">
-        		{% if all_books_list.has_previous %}
-            		<li><a href="?page={{ all_books_list.previous_page_number }}">Önceki</a></li>
-        		{% endif %}
-
-        		<span class="current">
-            		{{ all_books_list.number }} / {{ all_books_list.paginator.num_pages }}
-        		</span>
-
-        		{% if all_books_list.has_next %}
-            		<li><a href="?page={{ all_books_list.next_page_number }}">Sonraki</a></li>
-        		{% endif %}
-    		</ul>
-    		</div>
-</div>
-
-      <div class="footer">
-        <p>&copy; 2014 - D. Barış Akkurt tarafından geliştirilmektedir. Kitapların içerikleri yazarlarına aittir.</p>
-      </div>
-
-    </div>
-  </body>
+	</div>
+</body>
 </html>

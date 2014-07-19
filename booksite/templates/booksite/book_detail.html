@@ -5,8 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description"
-	content="Ücretsiz e-kitapların bulunduğu internet sitesi">
+<meta name="description" content="Ücretsiz e-kitapların bulunduğu internet sitesi">
 <meta name="author" content="D. Barış Akkurt">
 
 <title>Açık Kütüphane</title>
@@ -24,31 +23,31 @@
 		<div class="header">
 			<ul class="nav nav-pills pull-right">
 				<li><a href="/booksite/">Ana Sayfa</a></li>
-				<li class="active"><a href="/booksite/all_books/">Tüm
-						Kitaplar</a></li>
+				<li class="active"><a href="/booksite/all_books/">Tüm Kitaplar</a></li>
 				<li><a href="/booksite/about/">Hakkında</a></li>
 			</ul>
 			<h3 class="text-muted">Açık Kütüphane (Beta)</h3>
 		</div>
 		{% if dropbox_load %}
-		<div class="alert alert-success">Kitap Dropbox hesabınıza
-			eklendi.</div>
+		<div class="alert alert-success">Kitap Dropbox hesabınıza eklendi.</div>
 		{% else %}
 		<p></p>
 		{% endif %}
-		<div class="main">
+		<div class="main" style="display: table-row;">
 			<h4>{{ book.title }}</h4>
 			<p style="font-weight: bold;">Özet:</p>
 			<p>{{ book.long_summary }}</p>
-			<p style="font-weight: bold;">Sayfa sayısı:</p>
-			<p>{{ book.page_number }}</p>
-			<div style="overflow: hidden; float: left" class="item-column1">
-
+			<div style="overflow: hidden; float: left; width:70%; display: table-cell;" class="item-column1">
+				<p style="font-weight: bold;">Sayfa sayısı:</p>
+				<p>{{ book.page_number }}</p>
 				<p style="font-weight: bold;">Yazar:</p>
 				<ul>
 					{% for author in book.authors.all %}
 					<li><a href="{% url 'author_detail' author.id %}"> 
-					{{ author.first_name }} {{ author.last_name }}</a></li> {% endfor %}
+						{{ author.first_name }} {{ author.last_name }}
+						</a>
+					</li> 
+					{% endfor %}
 				</ul>
 				<p style="font-weight: bold;">Kategori:</p>
 				<ul>
@@ -64,26 +63,27 @@
 				<p style="font-weight: bold;">İnternet sayfası:</p>
 				<p>{{ book.book_url }}</p>
 
+				<div style="float:left; padding-right:5px">
 				<a href="http://127.0.0.1:8000/documents/{{book.book_file}}"
 					class="btn btn-primary">İndir</a>
+				</div>
 				<div>
 					<form action="/booksite/dropbox_login/{{book.id}}/" method="post">
-						{% csrf_token %} <input type="submit" value="Dropbox'a Yükle"
-							class="btn btn-success" />
+						{% csrf_token %} 
+						<input type="submit" value="Dropbox'a Yükle" class="btn btn-success" />
 					</form>
-<div>
-<p style="font-weight: bold;">Ek bilgi:</p>
-				<p>{{ book.additional_note }}</p></div>
 				</div>
-				<div>Bu kitap Açık Kütüphane'ye {{ book.date_created }} tarihinde
-					eklenmiştir.</div>
+				<div style="display:block;">
+					<p style="font-weight: bold;">Ek bilgi:</p>
+					<p>{{ book.additional_note }}</p>
+				</div>
 			</div>
-			<div style="overflow: hidden; text-align: right" class="item-column2">
+			<div style="overflow:hidden; text-align: right; width:30% display: table-cell;" class="item-column2">
 				<img src="http://127.0.0.1:8000/documents/{{book.cover_path}}"
-					alt="Kitap Kapağı" width="300" height="350" />
+					alt="Kitap Kapağı" width="100%" height="100%" />
 			</div>
+			<div style="display:block;">Bu kitap Açık Kütüphane'ye {{ book.date_created }} tarihinde eklenmiştir.</div>
 		</div>
-		
 
 		<div class="footer">
 			<p>&copy; 2014 - D. Barış Akkurt tarafından geliştirilmektedir.
