@@ -1,12 +1,11 @@
 # Django settings for openlibrary project.
 
 import os
+ADMIN_MEDIA_PREFIX = '/static/admin/'
 
 PROJECT_DIR = os.path.join(os.path.dirname(__file__), os.pardir)
 
-import logging
-logger = logging.getLogger(__file__)
-logger.debug(PROJECT_DIR) 
+TEMPLATE_DIR=os.path.join(os.path.join(PROJECT_DIR, 'booksite'), 'templates')
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -85,7 +84,7 @@ os.path.join(os.path.join(PROJECT_DIR, 'openlibrary'), 'staticfiles'),
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-#    'django.contrib.staticfiles.finders.DefaultStorageFinder',
+    'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
 
 # Make this unique, and don't share it with anybody.
@@ -117,6 +116,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    TEMPLATE_DIR
 )
 
 INSTALLED_APPS = (

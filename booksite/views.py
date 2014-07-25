@@ -22,10 +22,11 @@ from common.utility import utility
 logger = logging.getLogger(__name__)
  
 def all_books(request):
-    all_books_list = Book.objects.all().order_by('-title')[:]
+    all_books_list = Book.objects.all().order_by('title')[:]
     paginator = Paginator(all_books_list, 10) # Show 10 books per page
+    all_books=getBookNumber()
     
-    all_genres_list = Genre.objects.all().order_by('-name')[:]
+    all_genres_list = Genre.objects.all().order_by('name')[:]
     
     page = request.GET.get('page')
     try:
@@ -36,7 +37,7 @@ def all_books(request):
         # If page is out of range (e.g. 9999), deliver last page of results.
         all_books_list = paginator.page(paginator.num_pages)
         
-    context = {'all_books_list': all_books_list, 'all_genres_list': all_genres_list}
+    context = {'all_books_list': all_books_list, 'all_genres_list': all_genres_list, 'book_number': all_books}
     return render(request, 'booksite/all_books.html', context)
     
 def book_detail(request, book_id):
@@ -84,7 +85,8 @@ def send_message(request):
 DROPBOX_ACCESS_TYPE = 'app_folder'
     
 def dropbox_login(request, book_id):
-    callback_url='http://127.0.0.1:8000/booksite/dropbox_authenticate'
+    #callback_url='http://127.0.0.1:8000/booksite/dropbox_authenticate'
+    callback_url='http://dbarisakkurt.pythonanywhere.com/booksite/dropbox_authenticate'
     tokens=utility.getDropboxAppKeyAndSecret()
     
     print tokens[0]
@@ -130,8 +132,19 @@ def dropbox_authenticate(request):
             print "ERROR: ", e
             
     book = get_object_or_404(Book, pk=b_id)
-    callback_url="http://127.0.0.1:8000/booksite/books/"+str(b_id)+"/detail/"
+    #callback_url="http://127.0.0.1:8000/booksite/books/"+str(b_id)+"/detail/"
+    callback_url="http://dbarisakkurt.pythonanywhere.com/booksite/books/"+str(b_id)+"/detail/"
     dResult=True
     request.session['dropbox_load1']=dResult
     return redirect(callback_url)
 
+
+def getBookNumber(category='all'):
+    if category=='all':
+        all_books_list = Book.objects.all()[:]
+        return len(all_books_list)
+    else:
+        my_genre=Genre.objects.get(name=category)
+        print my_genre.id
+        all_books_by_genre=Book.objects.filter(genres=my_genre.id)
+        return len(all_books_by_genre)

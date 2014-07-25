@@ -47,6 +47,12 @@
 					</div>
 				</form>
 			</div>
+			<br />
+			<div>
+				{% if book_number %}
+				<p>Şu an {{book_number}} tane kitap listelenmektedir.
+				{% endif %}
+			</div>
 			<br /> {% if all_books_list %}
 			<div class="panel panel-default">
 				<div class="panel-heading">Tüm Kitaplar</div>

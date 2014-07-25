@@ -5,27 +5,41 @@ from django import forms
 import datetime
 
 
-#statik dosyaların yönetimi?
-#settings.py dosyasındaki şeyler. 
+
+#{% static "admin/css/base.css" %} /admini acmiyor pythonanywherede.
+#resim ve kitap dosya url'leri 127.0.0.1 olarak kalmış galiba.
+#change_name ve change_name2 fonksiyonları ismini değiştir.
+#TODO: filter genre kitabı sağa al
+#TODO: python ile kitap listesini pdf olarak dışarı aktarma. https://docs.djangoproject.com/en/dev/howto/outputting-pdf/
+#SSS soruları kalınlaştır ve mail atılan adresi değiştir.
+
+
+
+
+#safsata kılavuzu, emo, ozemre, istihza, http://programarcadegames.com/index.php?lang=tr
+
+#TODO: license modeline türkçe ve ingilizce web linki ekle
 
 #version2:
-#TODO: toplam kitap sayısını tüm kitaplar sayfasına ekle.
-#TODO: kitapları alfabetik olarak sırala tüm kitaplar sayfasında
 #TODO: iletişim formunu güzelleştir, bootstrap stilleri
-#TODO: python ile kitap listesini pdf olarak dışarı aktarma.
 #TODO: base template kullan.
 #TODO: eklenme tarihi, alfabetik vs. gibi sıralama türleri ekle.
 #TODO: admin sayfasında short, long summary text area yap.
 #TODO: haber ekleme kısmının olduğu haberler kısmını koy
 #TODO: pep8.py denetimi ekle
-
-#seçimli:
-#TODO: kitap url'lerini düzelt, dinamik olsun.
+#TODO: son eklenen 5 kitabı ana sayfada listele
+#TODO: twitter hesabını sitenin bir yerinde listele
+#TODO: fb, twitter paylaş linki ekle.
 #TODO: django sitemap yap.
+#TODO: filter genreyi all book list ile beraber yap.
+
+#daha sonra:
+#TODO: kitap url'lerini düzelt, dinamik olsun.
 #TODO: filter sayfasına pager ekle.
 #TODO: is_new alanı ekle. is_new true ise yanına new badge'i ekle ileride.
 #TODO: admin sayfasında dil default türkçe, lisans belirtilmemiş gelsin.
-
+#TODO: google arama entegrasyon veya kendin yap.
+#TODO: x serisi bölümü yap. (dünya tarihi serisi, veri koruma serisi vs. gibi)
 
 class Genre(models.Model):
     name = models.CharField(max_length=40)
