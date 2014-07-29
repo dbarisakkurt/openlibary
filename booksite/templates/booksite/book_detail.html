@@ -25,7 +25,7 @@
 				<li class="active"><a href="/booksite/all_books/">Tüm Kitaplar</a></li>
 				<li><a href="/booksite/about/">Hakkında</a></li>
 			</ul>
-			<h3 class="text-muted">Açık Kütüphane (Beta)</h3>
+			<h3 class="text-muted">Açık Kütüphane (Beta v0.1)</h3>
 		</div>
 		{% if dropbox_load %}
 		<div class="alert alert-success">Kitap Dropbox hesabınıza eklendi.</div>
@@ -63,7 +63,7 @@
 				<p>{{ book.book_url }}</p>
 
 				<div style="float:left; padding-right:5px">
-				<a href="http://dbarisakkurt.pythonanywhere.com/documents/{{book.book_file}}"
+				<a href="/documents/{{book.book_file}}"
 					class="btn btn-primary">İndir</a>
 				</div>
 				<div>
@@ -78,7 +78,7 @@
 				</div>
 			</div>
 			<div style="overflow:hidden; text-align: right; width:30% display: table-cell;" class="item-column2">
-				<img src="http://dbarisakkurt.pythonanywhere.com/documents/{{book.cover_path}}"
+				<img src="/documents/{{book.cover_path}}"
 					alt="Kitap Kapağı" width="100%" height="100%" />
 			</div>
 			

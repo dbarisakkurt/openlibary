@@ -29,7 +29,7 @@
 						Kitaplar</a></li>
 				<li><a href="/booksite/about/">Hakkında</a></li>
 			</ul>
-			<h3 class="text-muted">Açık Kütüphane (Beta)</h3>
+			<h3 class="text-muted">Açık Kütüphane (Beta v0.1)</h3>
 		</div>
 
 		<div class="main">
@@ -50,7 +50,8 @@
 			<br />
 			<div>
 				{% if book_number %}
-				<p>Şu an {{book_number}} tane kitap listelenmektedir.
+				<p>Şu an {{book_number}} tane kitap listelenmektedir. Kitapların PDF olarak listesine 
+				<a href="{% url 'output_pdf_book_list' %}">buradan</a> erişebilirsiniz.
 				{% endif %}
 			</div>
 			<br /> {% if all_books_list %}
@@ -91,7 +92,7 @@
 								<p>{{ book.license }}</p>
 							</div>
 							<div style="overflow: hidden; overflow: hidden; text-align: right" class="item-column2">
-								<img src="http://127.0.0.1:8000/documents/{{book.cover_path}}"
+								<img src="/documents/{{book.cover_path}}"
 									alt="Kitap Kapagi" width="100" height="140" />
 							</div>
 						</li> 
