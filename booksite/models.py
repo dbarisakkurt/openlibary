@@ -4,38 +4,40 @@ from django.db import models
 from django import forms
 import datetime
 
-#{% static "admin/css/base.css" %} /admini acmiyor pythonanywherede.
-#view'daki callback_url hardcode
-#sendmail viewini düzelt konuyla ilgili vs.
 
-#oguz arslan mail
 
 #version beta 0.2
-#TODO: base template kullan.
-#TODO: admin sayfasında short, long summary text area yap.
-#TODO: eklenme tarihi, alfabetik vs. gibi sıralama türleri ekle.
-#TODO: son eklenen 5 kitabı ana sayfada listele
-#TODO: django sitemap yap.
+#sendmail ile mail yollanabilsin
+#google analytics ekle
 #TODO: filter genreyi all book list ile beraber yap.
 #TODO: filter sayfasına pager ekle.
 #TODO: license modeline türkçe, ingilizce web linki ve kısa açıklama ekle
+#TODO: language i ayrı bir tabloya al.
+#TODO: new badge'ini son 1 ay içinde eklenmiş kitaplar için koy sadece
+#TODO: çevirmen verisini ekle.
+#ERROR:  HTTPSConnectionPool(host='api-content.dropbox.com', port=443): Read timed out.
+
+#rango
+#daha sonra
+#TODO: custom 404 error sayfası yap.
+#TODO: django sitemap yap.
+#TODO: rss okuyucusu yap.
+#TODO: admin sayfasında short, long summary text area yap.
+#TODO: eklenme tarihi, alfabetik vs. gibi sıralama türleri ekle.
+#TODO: son eklenen kitaplar sayfası yap.
+#TODO: ana sayfada rasgele kitapları image slider olarak listele
 #TODO: twitter hesabını sitenin bir yerinde listele
-
-
-#version beta 0.3
+#TODO: admin sayfasında dil default türkçe, lisans belirtilmemiş gelsin.
+#TODO: admin sayfası logo değiştir.
 #TODO: internet sayfası linkleri link olsun.
 #TODO: haber ekleme kısmının olduğu haberler kısmını koy
+#TODO: en çok indirilenler sayfası yap.
 #TODO: google arama entegrasyon veya kendin yap.
 #TODO: x serisi bölümü yap. (dünya tarihi serisi, veri koruma serisi vs. gibi)
 #TODO: fb, twitter paylaş linki ekle.
-#TODO: admin sayfasında dil default türkçe, lisans belirtilmemiş gelsin.
-
-
-#daha sonra:
-#TODO: pep8.py denetimi ekle
 #TODO: iletişim formunu güzelleştir, bootstrap stilleri
-#TODO: is_new alanı ekle. is_new true ise yanına new badge'i ekle ileride.
-
+#TODO: onedrive a yükleme desteği
+#TODO: google drive a yükleme desteği
 
 
 
@@ -88,9 +90,9 @@ class Book(models.Model):
     page_number = models.CharField(max_length=10)
     genres = models.ManyToManyField(Genre)
     book_url = models.CharField(max_length=100)
-    date_created = models.DateField(auto_now=True)
-    created_by = models.CharField(max_length=100)
-    cover_path = models.ImageField(upload_to=get_cover_name)
+    date_created = models.DateField(auto_now=True) 
+    created_by = models.CharField(max_length=100) 
+    cover_path = models.ImageField(upload_to=get_cover_name) 
     book_file = models.FileField(upload_to=get_book_name)
     short_summary = models.CharField(max_length=400)
     long_summary = models.CharField(max_length=800)

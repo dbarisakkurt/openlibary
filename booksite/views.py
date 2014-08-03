@@ -1,4 +1,4 @@
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 import os
 import json
@@ -28,8 +28,8 @@ logger = logging.getLogger(__name__)
  
 def all_books(request):
     all_books_list = Book.objects.all().order_by('title')[:]
-    paginator = Paginator(all_books_list, 10) # Show 10 books per page
-    all_books=getBookNumber()
+    paginator = Paginator(all_books_list, 10)  # Show 10 books per page
+    all_books = getBookNumber()
     
     all_genres_list = Genre.objects.all().order_by('name')[:]
     
@@ -37,7 +37,7 @@ def all_books(request):
     try:
         all_books_list = paginator.page(page)
     except PageNotAnInteger:
-        all_books_list = paginator.page(1)        # If page is not an integer, deliver first page.
+        all_books_list = paginator.page(1)  # If page is not an integer, deliver first page.
     except EmptyPage:
         # If page is out of range (e.g. 9999), deliver last page of results.
         all_books_list = paginator.page(paginator.num_pages)
@@ -47,11 +47,11 @@ def all_books(request):
     
 def book_detail(request, book_id):
     if not request.session.has_key('dropbox_load1'):
-        sonuc=False
+        sonuc = False
     else:
-        sonuc=request.session['dropbox_load1']
+        sonuc = request.session['dropbox_load1']
     book = get_object_or_404(Book, pk=book_id)
-    if sonuc==True:
+    if sonuc == True:
         request.session.pop("dropbox_load1", None)
         return render(request, 'booksite/book_detail.html', {'book': book, 'dropbox_load': True })
     else:
@@ -64,10 +64,10 @@ def author_detail(request, author_id):
 
 def filter_genre(request):
     if request.method == 'GET':
-        genre_number=request.GET['genre']
-        books_in_genre=Book.objects.filter(genres__id=genre_number)
-        genre_url='/booksite/filter_genre/'+genre_number+'/'
-        #return HttpResponseRedirect(genre_url)
+        genre_number = request.GET['genre']
+        books_in_genre = Book.objects.filter(genres__id=genre_number)
+        genre_url = '/booksite/filter_genre/' + genre_number + '/'
+        # return HttpResponseRedirect(genre_url)
         return render(request, 'booksite/filter_genre.html', {'books_in_genre': books_in_genre})
    
 def send_message(request):
@@ -80,7 +80,7 @@ def send_message(request):
             message = form.cleaned_data['message']
             sender = form.cleaned_data['sender']
             
-            send_mail(subject, message+" Gonderen: "+sender, sender, ['acikkiletisim@gmail.com'])
+            send_mail(subject, message + " Gonderen: " + sender, sender, ['acikkiletisim@gmail.com'])
             return render_to_response('booksite/index.html', {}, context)
         else:
             print form.errors
@@ -92,10 +92,9 @@ def send_message(request):
 DROPBOX_ACCESS_TYPE = 'app_folder'
     
 def dropbox_login(request, book_id):
-    callback_url='http://dbarisakkurt.webfactional.com/booksite/dropbox_authenticate'
-    #callback_url='http://127.0.0.1:8000/booksite/dropbox_authenticate'
-    #callback_url='http://dbarisakkurt.pythonanywhere.com/booksite/dropbox_authenticate'
-    tokens=utility.getDropboxAppKeyAndSecret()
+    #callback_url = 'http://www.acikkutuphane.org/dropbox_authenticate'
+    callback_url='http://127.0.0.1:8000/dropbox_authenticate'
+    tokens = utility.getDropboxAppKeyAndSecret()
     
     print tokens[0]
     print tokens[1]
@@ -104,58 +103,57 @@ def dropbox_login(request, book_id):
     request_token = sess.obtain_request_token()
     url = sess.build_authorize_url(request_token, oauth_callback=callback_url)
 
-    request.session['request_token']=request_token
-    request.session['session']=sess
-    request.session['book_id']=book_id
-    request.session['callback_url']=request.get_full_path()
+    request.session['request_token'] = request_token
+    request.session['session'] = sess
+    request.session['book_id'] = book_id
+    request.session['callback_url'] = request.get_full_path()
     return HttpResponseRedirect(url)
 
 
 def dropbox_authenticate(request):
     print "auth fonk."
-    request_token=request.session['request_token']
-    sess=request.session['session']
+    request_token = request.session['request_token']
+    sess = request.session['session']
      
     access_token = sess.obtain_access_token(request_token)
     client1 = client.DropboxClient(sess)
     
-    base_path=os.path.dirname(os.path.abspath(__file__))
-    #dosya yukle
-    b_id=request.session['book_id']
+    base_path = os.path.dirname(os.path.abspath(__file__))
+    # dosya yukle
+    b_id = request.session['book_id']
     book1 = get_object_or_404(Book, pk=b_id)
-    temp_file_path=os.path.join(base_path, 'documents')
+    temp_file_path = os.path.join(base_path, 'documents')
     
-    print "Kitap yol:"+str(book1.book_file)
+    print "Kitap yol:" + str(book1.book_file)
     
-    book_path=os.path.join(temp_file_path, str(book1.book_file))
-    print "Book path="+str(book_path)
+    book_path = os.path.join(temp_file_path, str(book1.book_file))
+    print "Book path=" + str(book_path)
     
     try:
         with open(book_path, "rb") as fh:
             print "Dosya acildi"
-            print "basename="+str(os.path.basename(book_path))
+            print "basename=" + str(os.path.basename(book_path))
             res = client1.put_file(os.path.basename(book_path), fh)
             print "Dosya yuklendi: ", res
     except Exception, e:
             print "ERROR: ", e
             
     book = get_object_or_404(Book, pk=b_id)
-    callback_url="http://dbarisakkurt.webfactional.com/booksite/books/"+str(b_id)+"/detail/"
-    #callback_url="http://127.0.0.1:8000/booksite/books/"+str(b_id)+"/detail/"
-    #callback_url="http://dbarisakkurt.pythonanywhere.com/booksite/books/"+str(b_id)+"/detail/"
-    dResult=True
-    request.session['dropbox_load1']=dResult
+    #callback_url = "http://www.acikkutuphane.org/books/" + str(b_id) + "/detail/"
+    callback_url="http://127.0.0.1:8000/books/"+str(b_id)+"/detail/"
+    dResult = True
+    request.session['dropbox_load1'] = dResult
     return redirect(callback_url)
 
 
 def getBookNumber(category='all'):
-    if category=='all':
+    if category == 'all':
         all_books_list = Book.objects.all()[:]
         return len(all_books_list)
     else:
-        my_genre=Genre.objects.get(name=category)
+        my_genre = Genre.objects.get(name=category)
         print my_genre.id
-        all_books_by_genre=Book.objects.filter(genres=my_genre.id)
+        all_books_by_genre = Book.objects.filter(genres=my_genre.id)
         return len(all_books_by_genre)
     
 def output_pdf_list(request):
@@ -167,20 +165,20 @@ def output_pdf_list(request):
     pdfmetrics.registerFont(TTFont('Vera', 'Vera.ttf'))
     p.setFont('Vera', 16)
     all_books_list = Book.objects.all()[:]
-    coordx, coordy=100, 760
+    coordx, coordy = 100, 760
     
     p.drawString(200, 800, "Açık Kütüphane Kitap Listesi")
     p.setFont('Vera', 11)
     
-    counter=1
+    counter = 1
     for book in all_books_list:
-        p.drawString(coordx, coordy, str(counter)+"- "+book.title)
-        coordy-=20
-        counter+=1
-        if coordy==100:
+        p.drawString(coordx, coordy, str(counter) + "- " + book.title)
+        coordy -= 20
+        counter += 1
+        if coordy == 100:
             p.showPage()
             p.setFont('Vera', 11)
-            coordy=800
+            coordy = 800
     
     p.save()
     return response

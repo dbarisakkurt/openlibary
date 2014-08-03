@@ -1,6 +1,7 @@
 import os
 import ntpath
 
+#TODO: baris
 
 class FileOperation(object):
     @staticmethod

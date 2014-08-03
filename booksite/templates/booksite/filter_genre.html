@@ -1,35 +1,12 @@
-<!DOCTYPE html>
-{% load static %}
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ücretsiz e-kitapların bulunduğu internet sitesi">
-    <meta name="author" content="D. Barış Akkurt">
+{% extends "booksite/base_template.html" %}
 
-    <title>Açık Kütüphane</title>
+{% block menu %}
+	<li><a href="/">Ana Sayfa</a></li>
+	<li><a href="/all_books/">Tüm Kitaplar</a></li>
+	<li class="active"><a href="/about/">Hakkında</a></li>
+{% endblock %} 
 
-    <!-- Bootstrap core CSS -->
-    <!--<link href="../../dist/css/bootstrap.css" rel="stylesheet">-->
-    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
-
-    <!-- Custom styles for this template -->
-    <link href="{% static 'css/jumbotron-narrow.css' %}" rel="stylesheet">
-  </head>
-
-  <body>
-    <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li><a href="/booksite/">Ana Sayfa</a></li>
-          <li class="active"><a href="/booksite/all_books/">Tüm Kitaplar</a></li>
-          <li><a href="/booksite/about/">Hakkında</a></li>
-        </ul>
-        <h3 class="text-muted">Açık Kütüphane (Beta v0.1)</h3>
-      </div>
-
-      <div class="main">		  
+{% block content %}
 		{% if books_in_genre %}
 		<div class="panel panel-default">
 		<div class="panel-body">
@@ -59,7 +36,7 @@
 			  <p> {{ book.license }} </p>
 			  </div>
 			  <div style="overflow: hidden; overflow: hidden; text-align: right" class="item-column2">
-			  	<img src="/documents/{{book.cover_path}}" alt="Kitap Kapagi" width="100" height="140" />
+			  	<img src="/static/{{book.cover_path}}" alt="Kitap Kapagi" width="100" height="140" />
 			  </div>
 			</li>
 		  {% endfor %}
@@ -68,12 +45,5 @@
 		{% else %}
 		  <p>Herhangi bir kitap bulunmamaktadır.</p>
 		{% endif %}
-      </div>
-	
-      <div class="footer">
-        <p>&copy; 2014 - D. Barış Akkurt tarafından geliştirilmektedir. Kitapların içerikleri yazarlarına aittir.</p>
-      </div>
 
-    </div>
-  </body>
-</html>
+{% endblock %}
