@@ -7,7 +7,7 @@ from django.http import HttpResponse
 from reportlab.pdfgen import canvas
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont  
-from booksite.models import Book, Genre, Author, License
+from booksite.models import Book, Genre, Author, License, Translator
 from django.shortcuts import render, get_object_or_404, render_to_response
 from django.template import RequestContext
 from models import ContactForm
@@ -82,6 +82,11 @@ def book_detail(request, book_id):
 def author_detail(request, author_id):
     author = get_object_or_404(Author, pk=author_id)
     return render(request, 'booksite/author_detail.html', {'author': author})
+
+
+def translator_detail(request, translator_id):
+    translator = get_object_or_404(Translator, pk=translator_id)
+    return render(request, 'booksite/translator_detail.html', {'translator': translator})
 
 def license_detail(request, license_id):
     license = get_object_or_404(License, pk=license_id)
@@ -200,3 +205,6 @@ def output_pdf_list(request):
     
     p.save()
     return response
+
+def handler404(request):
+    return render_to_response('booksite/404.html')

@@ -1,6 +1,8 @@
 # Django settings for openlibrary project.
 
 import os
+import local_settings as LOCAL_SETTINGS
+
 ADMIN_MEDIA_PREFIX = '/static/admin/'
 
 PROJECT_DIR = os.path.join(os.path.dirname(__file__), os.pardir)
@@ -37,7 +39,8 @@ DATABASES = {
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = ['www.acikkutuphane.org', 'acikkutuphane.org']
+ALLOWED_HOSTS = LOCAL_SETTINGS.allowed_hosts
+#ALLOWED_HOSTS = ['*']
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -144,8 +147,8 @@ INSTALLED_APPS = (
 SESSION_SERIALIZER='django.contrib.sessions.serializers.PickleSerializer'
 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'acikkiletisim@gmail.com'
-EMAIL_HOST_PASSWORD = '####'
+EMAIL_HOST_USER = LOCAL_SETTINGS.email_host_user
+EMAIL_HOST_PASSWORD = LOCAL_SETTINGS.email_host_password
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 

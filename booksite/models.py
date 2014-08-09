@@ -4,26 +4,20 @@ from django.db import models
 from django import forms
 import datetime
 
-
-
 #version beta 0.2
 #sendmail ile mail yollanabilsin
-#TODO: çevirmen verisini ekle.
 #ERROR:  HTTPSConnectionPool(host='api-content.dropbox.com', port=443): Read timed out.
 
 #rango
 #daha sonra
-#TODO: custom 404 error sayfası yap.
 #TODO: django sitemap yap.
 #TODO: rss okuyucusu yap.
-#TODO: admin sayfasında short, long summary text area yap.
 #TODO: eklenme tarihi, alfabetik vs. gibi sıralama türleri ekle.
 #TODO: son eklenen kitaplar sayfası yap.
 #TODO: ana sayfada rasgele kitapları image slider olarak listele
 #TODO: twitter hesabını sitenin bir yerinde listele
-#TODO: admin sayfasında dil default türkçe, lisans belirtilmemiş gelsin.
+#TODO: admin lisans belirtilmemiş gelsin.
 #TODO: admin sayfası logo değiştir.
-#TODO: internet sayfası linkleri link olsun.
 #TODO: haber ekleme kısmının olduğu haberler kısmını koy
 #TODO: en çok indirilenler sayfası yap.
 #TODO: google arama entegrasyon veya kendin yap.
@@ -54,8 +48,9 @@ class Language(models.Model):
     
     def __unicode__(self):
         return self.name
-
-class Author(models.Model):
+    
+    
+class Writer(models.Model):
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=40)
     email = models.EmailField()
@@ -63,9 +58,18 @@ class Author(models.Model):
     biography = models.TextField(max_length=200)
     birthdate = models.DateField(auto_now=True)
     
+    class Meta:
+        abstract = True
+    
     def __unicode__(self):
         return self.first_name+" "+self.last_name
+    
 
+class Author(Writer):
+    pass
+
+class Translator(Writer):
+    pass
 
 class Book(models.Model):
 
@@ -89,6 +93,7 @@ class Book(models.Model):
 
     title = models.CharField(max_length=100)
     authors = models.ManyToManyField(Author)
+    translators = models.ManyToManyField(Translator, null=True, blank=True)
     page_number = models.CharField(max_length=10)
     genres = models.ManyToManyField(Genre)
     book_url = models.CharField(max_length=100)
@@ -99,8 +104,8 @@ class Book(models.Model):
     short_summary = models.CharField(max_length=400)
     long_summary = models.CharField(max_length=800)
     orginal_title = models.CharField(max_length=100)
-    orginal_language = models.ForeignKey(Language, related_name='olang')
-    language = models.ForeignKey(Language, related_name='lang')
+    orginal_language = models.ForeignKey(Language, related_name='olang', default=1)
+    language = models.ForeignKey(Language, related_name='lang', default=1)
     license = models.ForeignKey(License)
     publish_date = models.DateField(auto_now=True)
     book_size = models.FloatField()
@@ -114,7 +119,4 @@ class ContactForm(forms.Form):
     sender = forms.EmailField(max_length=100, required=False, label="E-posta:")
     subject = forms.CharField(max_length=100, label="Konu:")
     message = forms.CharField(widget=forms.Textarea, label="İleti:")
-
-
-
-
+ 

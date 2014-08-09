@@ -18,3 +18,5 @@ urlpatterns = patterns('',
 
 
 urlpatterns += staticfiles_urlpatterns()
+
+handler404 = 'booksite.views.handler404'
