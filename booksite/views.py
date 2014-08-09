@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 
 import os
+from datetime import date, timedelta
 import json
 from django.http import HttpResponse
 from reportlab.pdfgen import canvas
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont  
-from booksite.models import Book, Genre, Author
+from booksite.models import Book, Genre, Author, License
 from django.shortcuts import render, get_object_or_404, render_to_response
 from django.template import RequestContext
 from models import ContactForm
@@ -27,23 +28,44 @@ from common.utility import utility
 logger = logging.getLogger(__name__)
  
 def all_books(request):
-    all_books_list = Book.objects.all().order_by('title')[:]
-    paginator = Paginator(all_books_list, 10)  # Show 10 books per page
-    all_books = getBookNumber()
+    all_books_list=[]
+    if request.method == 'GET':
+        if request.GET.get('genre', -1) != -1:
+            
+            genre_number = request.GET.get('genre', -1)
+            all_books_list = Book.objects.filter(genres__id=genre_number)
+        else:
+            all_books_list = Book.objects.all().order_by('title')[:]
     
-    all_genres_list = Genre.objects.all().order_by('name')[:]
-    
-    page = request.GET.get('page')
-    try:
-        all_books_list = paginator.page(page)
-    except PageNotAnInteger:
-        all_books_list = paginator.page(1)  # If page is not an integer, deliver first page.
-    except EmptyPage:
-        # If page is out of range (e.g. 9999), deliver last page of results.
-        all_books_list = paginator.page(paginator.num_pages)
+        #genre_url = '/booksite/filter_genre/' + genre_number + '/'
+            
+        paginator = Paginator(all_books_list, 10)  # Show 10 books per page
+        all_books = getBookNumber()
         
-    context = {'all_books_list': all_books_list, 'all_genres_list': all_genres_list, 'book_number': all_books}
-    return render(request, 'booksite/all_books.html', context)
+        all_genres_list = Genre.objects.all().order_by('name')[:]
+        
+        page = request.GET.get('page')
+        try:
+            all_books_list = paginator.page(page)
+        except PageNotAnInteger:
+            all_books_list = paginator.page(1)  # If page is not an integer, deliver first page.
+        except EmptyPage:
+            # If page is out of range (e.g. 9999), deliver last page of results.
+            all_books_list = paginator.page(paginator.num_pages)
+            
+        
+        one_month_ago=date.today()-timedelta(days=30)
+        print one_month_ago
+        context = {'all_books_list': all_books_list, 'all_genres_list': all_genres_list, 'book_number': all_books, 'threshold_date': one_month_ago}
+        return render(request, 'booksite/all_books.html', context)
+
+def filter_genre(request):
+    if request.method == 'GET':
+        genre_number = request.GET['genre']
+        books_in_genre = Book.objects.filter(genres__id=genre_number)
+        genre_url = '/booksite/filter_genre/' + genre_number + '/'
+        # return HttpResponseRedirect(genre_url)
+        return render(request, 'booksite/filter_genre.html', {'books_in_genre': books_in_genre})
     
 def book_detail(request, book_id):
     if not request.session.has_key('dropbox_load1'):
@@ -61,14 +83,10 @@ def author_detail(request, author_id):
     author = get_object_or_404(Author, pk=author_id)
     return render(request, 'booksite/author_detail.html', {'author': author})
 
+def license_detail(request, license_id):
+    license = get_object_or_404(License, pk=license_id)
+    return render(request, 'booksite/license_detail.html', {'license': license})
 
-def filter_genre(request):
-    if request.method == 'GET':
-        genre_number = request.GET['genre']
-        books_in_genre = Book.objects.filter(genres__id=genre_number)
-        genre_url = '/booksite/filter_genre/' + genre_number + '/'
-        # return HttpResponseRedirect(genre_url)
-        return render(request, 'booksite/filter_genre.html', {'books_in_genre': books_in_genre})
    
 def send_message(request):
     context = RequestContext(request)          

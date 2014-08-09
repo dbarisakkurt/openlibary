@@ -36,11 +36,15 @@
 				<p style="font-weight: bold;">Dil:</p>
 				<p>{{ book.language }}</p>
 				<p style="font-weight: bold;">Lisans:</p>
-				<p>{{ book.license }}</p>
+				{% if book.license.name == "Belirtilmemiş" %}
+					<p>{{ book.license.name }}</p>
+				{% else %}
+					<p><a href="{% url 'license_detail' book.license.id %}">{{ book.license.name }}</a></p>
+				{% endif %}
 				<p style="font-weight: bold;">Kitap boyutu:</p>
 				<p>{{ book.book_size }} KB</p>
 				<p style="font-weight: bold;">İnternet sayfası:</p>
-				<p>{{ book.book_url }}</p>
+				<p><a href="{{ book.book_url }}">{{ book.book_url }}</a></p>
 
 				<div style="float:left; padding-right:5px">
 				<a href="/static/{{book.book_file}}"

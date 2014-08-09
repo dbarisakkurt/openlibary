@@ -8,12 +8,6 @@ import datetime
 
 #version beta 0.2
 #sendmail ile mail yollanabilsin
-#google analytics ekle
-#TODO: filter genreyi all book list ile beraber yap.
-#TODO: filter sayfasına pager ekle.
-#TODO: license modeline türkçe, ingilizce web linki ve kısa açıklama ekle
-#TODO: language i ayrı bir tabloya al.
-#TODO: new badge'ini son 1 ay içinde eklenmiş kitaplar için koy sadece
 #TODO: çevirmen verisini ekle.
 #ERROR:  HTTPSConnectionPool(host='api-content.dropbox.com', port=443): Read timed out.
 
@@ -49,6 +43,14 @@ class Genre(models.Model):
     
 class License(models.Model):
     name = models.CharField(max_length=100)
+    english_license = models.CharField(max_length=100)
+    turkish_license = models.CharField(max_length=100)
+    
+    def __unicode__(self):
+        return self.name
+    
+class Language(models.Model):
+    name = models.CharField(max_length=50)
     
     def __unicode__(self):
         return self.name
@@ -97,8 +99,8 @@ class Book(models.Model):
     short_summary = models.CharField(max_length=400)
     long_summary = models.CharField(max_length=800)
     orginal_title = models.CharField(max_length=100)
-    orginal_language = models.CharField(max_length=100)
-    language = models.CharField(max_length=100)
+    orginal_language = models.ForeignKey(Language, related_name='olang')
+    language = models.ForeignKey(Language, related_name='lang')
     license = models.ForeignKey(License)
     publish_date = models.DateField(auto_now=True)
     book_size = models.FloatField()

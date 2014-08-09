@@ -7,12 +7,13 @@
 {% endblock %} 
 
 {% block content %}
+
 			<div class="row">
-				<form method="get" action="/filter_genre">
+				<form method="get" action="/all_books">
 					<div class="col-md-4">
 						<select name="genre" class="form-control"> 
 						{% for genre in all_genres_list %}
-							<option value="{{genre.id}}">{{genre.name}}</option> {% endfor %}
+							<option value="{{genre.id}}" {% if request.GET.genre == genre.id|stringformat:"s" %} selected {% endif %}>{{genre.name}}</option> {% endfor %}
 						</select>
 					</div>
 					<div class="col-md-4">
@@ -23,13 +24,13 @@
 			<br />
 			<div>
 				{% if book_number %}
-				<p>Şu an {{book_number}} tane kitap listelenmektedir. Kitapların PDF olarak listesine 
+				<p>Açık Kütüphane'de {{book_number}} tane kitap vardır. Bu kitapların PDF olarak listesine 
 				<a href="{% url 'output_pdf_book_list' %}">buradan</a> erişebilirsiniz.
 				{% endif %}
 			</div>
 			<br /> {% if all_books_list %}
 			<div class="panel panel-default">
-				<div class="panel-heading">Tüm Kitaplar</div>
+				<div class="panel-heading">Kitaplar</div>
 				<div class="panel-body">
 					<ul class="list-gruop">
 						{% for book in all_books_list %}
@@ -37,7 +38,9 @@
 							<div style="width: 100%;">
 								<h4>
 									<a href="{% url 'book_detail' book.id %}">{{ book.title }}</a>
-									<span class="label label-danger">Yeni</span>
+									{% if book.publish_date > threshold_date %}
+									    <span class="label label-danger">Yeni</span>
+									{% endif %}
 								</h4>
 							</div>
 							<div>
@@ -62,7 +65,11 @@
 								</ul>
 								</p>
 								<p style="font-weight: bold;">Lisans:</p>
-								<p>{{ book.license }}</p>
+								{% if book.license.name == "Belirtilmemiş" %}
+									<p>{{ book.license.name }}</p>
+								{% else %}
+									<p><a href="{% url 'license_detail' book.license.id %}">{{ book.license.name }}</a></p>
+								{% endif %}
 							</div>
 							<div style="overflow: hidden; overflow: hidden; text-align: right" class="item-column2">
 								<img src="/static/{{book.cover_path}}"

@@ -15,4 +15,5 @@ urlpatterns = patterns('',
     url(r'^dropbox_login/(?P<book_id>\d+)/$', views.dropbox_login, name='dropbox_login'),
     url(r'^dropbox_authenticate/?$',views.dropbox_authenticate, name='dropbox_authenticate'),
     url(r'output_pdf_book_list/', views.output_pdf_list, name='output_pdf_book_list'),
+    url(r'^licenses/(?P<license_id>\d+)/detail/$', views.license_detail, name='license_detail'),
 )

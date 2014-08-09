@@ -8,7 +8,7 @@
 
 {% block content %}
 		  <h4 style="font-weight:bold;">Yazar:</h4><h4> {{ author.first_name }} {{ author.last_name }}</h4>
-		  <p style="font-weight:bold;">İnternet sitesi:</p> <p> {{author.website}} </p>
+		  <p style="font-weight:bold;">İnternet sitesi:</p> <p> <a href="{{author.website}}"> {{author.website}} </a> </p>
 		  <p style="font-weight:bold;">E-posta:</p> <p> {{author.email}} </p>
 		  <p style="font-weight:bold;">Biyografi:</p> <p> {{author.biography}} </p>
 {% endblock %}
